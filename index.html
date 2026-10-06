@@ -1,0 +1,2739 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThriftHaven Outdoor Sleman — Curated Mountain Gear & Gorpcore Thrift</title>
+  <meta name="description" content="Toko thrift outdoor terpercaya di Sleman Yogyakarta. Jaket gunung Gore-Tex, trail sneakers, celana trekking, tas carrier, dan pakaian outdoor curated grade A." />
+  <meta property="og:title" content="ThriftHaven Outdoor Sleman — Curated Mountain Gear & Gorpcore Thrift" />
+  <meta property="og:description" content="Toko thrift outdoor terpercaya di Sleman Yogyakarta. Jaket gunung Gore-Tex, trail sneakers, celana trekking, tas carrier, dan pakaian outdoor curated grade A." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Syne (Technical Bold Headline) & Plus Jakarta Sans (Body) & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Immediate Theme Initialization (No FOUC)
+    (function() {
+      try {
+        const saved = localStorage.getItem('thrifthaven_theme');
+        if (saved && saved !== 'obsidian') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tactical: {
+              black: 'rgb(var(--tactical-black-rgb) / <alpha-value>)',
+              surface: 'rgb(var(--tactical-surface-rgb) / <alpha-value>)',
+              card: 'rgb(var(--tactical-card-rgb) / <alpha-value>)',
+              border: 'rgb(var(--tactical-border-rgb) / <alpha-value>)',
+              borderLight: 'rgb(var(--tactical-border-light-rgb) / <alpha-value>)',
+              orange: 'rgb(var(--tactical-orange-rgb) / <alpha-value>)',
+              orangeHover: 'rgb(var(--tactical-orange-hover-rgb) / <alpha-value>)',
+              moss: 'rgb(var(--tactical-moss-rgb) / <alpha-value>)',
+              slate: 'rgb(var(--tactical-slate-rgb) / <alpha-value>)',
+            }
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Base & 4 Curated Outdoor Palettes */
+    :root, [data-theme="obsidian"] {
+      --tactical-black-rgb: 9 10 12;
+      --tactical-surface-rgb: 17 19 23;
+      --tactical-card-rgb: 22 26 32;
+      --tactical-border-rgb: 35 41 51;
+      --tactical-border-light-rgb: 52 61 76;
+      --tactical-orange-rgb: 255 92 28;
+      --tactical-orange-hover-rgb: 255 116 59;
+      --tactical-moss-rgb: 16 185 129;
+      --tactical-slate-rgb: 148 163 184;
+    }
+
+    [data-theme="volcano"] {
+      --tactical-black-rgb: 10 9 11;
+      --tactical-surface-rgb: 21 18 22;
+      --tactical-card-rgb: 28 24 30;
+      --tactical-border-rgb: 53 37 46;
+      --tactical-border-light-rgb: 77 55 68;
+      --tactical-orange-rgb: 244 63 94;
+      --tactical-orange-hover-rgb: 251 113 133;
+      --tactical-moss-rgb: 245 158 11;
+      --tactical-slate-rgb: 168 162 158;
+    }
+
+    [data-theme="forest"] {
+      --tactical-black-rgb: 6 13 9;
+      --tactical-surface-rgb: 13 23 18;
+      --tactical-card-rgb: 19 34 25;
+      --tactical-border-rgb: 34 56 44;
+      --tactical-border-light-rgb: 49 82 64;
+      --tactical-orange-rgb: 249 115 22;
+      --tactical-orange-hover-rgb: 251 146 60;
+      --tactical-moss-rgb: 34 197 94;
+      --tactical-slate-rgb: 141 161 148;
+    }
+
+    [data-theme="glacial"] {
+      --tactical-black-rgb: 7 11 16;
+      --tactical-surface-rgb: 13 21 31;
+      --tactical-card-rgb: 19 31 45;
+      --tactical-border-rgb: 32 49 68;
+      --tactical-border-light-rgb: 46 71 100;
+      --tactical-orange-rgb: 6 182 212;
+      --tactical-orange-hover-rgb: 34 211 238;
+      --tactical-moss-rgb: 16 185 129;
+      --tactical-slate-rgb: 148 163 184;
+    }
+
+    /* Technical topographic subtle contour pattern */
+    .topo-bg {
+      background-image: radial-gradient(rgba(var(--tactical-orange-rgb), 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: rgb(var(--tactical-black-rgb)); }
+    ::-webkit-scrollbar-thumb { background: rgb(var(--tactical-border-rgb)); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgb(var(--tactical-orange-rgb)); }
+
+    /* Scroll Fade-In Animations via Intersection Observer */
+    .fade-observe {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .fade-observe.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-observe {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-tactical-black text-stone-200 font-sans antialiased selection:bg-tactical-orange selection:text-white">
+
+  <!-- ================= TOP ANNOUNCEMENT ================= -->
+  <aside class="bg-tactical-surface border-b border-tactical-border px-4 py-2 text-xs text-stone-300">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-tactical-orange/20 text-tactical-orange text-[10px] font-mono font-bold uppercase tracking-wider">
+          BASECAMP SLEMAN
+        </span>
+        <span class="font-medium text-xs">📍 Ruko Kaliurang Square, Sleman, D.I. Yogyakarta · Jalur Utama Menuju Merapi</span>
+      </div>
+      <div class="flex items-center gap-3 text-[11px] font-mono text-stone-400">
+        <span>Voucher Ekspedisi: <strong class="text-tactical-orange">MERAPI10</strong> (Diskon 10%)</span>
+        <span class="text-tactical-border">|</span>
+        <a href="#lokasi-store" class="text-tactical-orange hover:underline font-semibold">Rute Toko &rarr;</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= 1. NAVBAR ================= -->
+  <header class="sticky top-0 z-40 bg-tactical-black/95 backdrop-blur-md border-b border-tactical-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo (Compact & Clean) -->
+        <a href="#" class="flex items-center gap-2 group flex-shrink-0 mr-3 lg:mr-6">
+          <div class="w-9 h-9 rounded-lg bg-tactical-surface border border-tactical-border flex items-center justify-center text-tactical-orange group-hover:border-tactical-orange transition-colors flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 20h18L15 6l-4 7-3-4-5 11z" />
+            </svg>
+          </div>
+          <div class="flex flex-col justify-center">
+            <div class="flex items-center gap-1.5 leading-none">
+              <span class="font-display font-black text-base sm:text-lg tracking-tight text-white group-hover:text-tactical-orange transition-colors">THRIFTHAVEN</span>
+              <span class="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-tactical-orange/20 text-tactical-orange border border-tactical-orange/40">OUTDOOR</span>
+            </div>
+            <span class="block text-[8px] sm:text-[9px] font-mono tracking-wider text-tactical-slate uppercase mt-1 leading-none">
+              Basecamp Sleman, Jogja
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (Clean, Spacious, Uncluttered) -->
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-7">
+          <a href="#latest-drop" class="text-xs font-bold tracking-wider uppercase text-stone-200 hover:text-tactical-orange transition-colors whitespace-nowrap">
+            Drop Gear
+          </a>
+
+          <!-- Interactive Kategori Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-xs font-bold tracking-wider uppercase text-stone-300 group-hover:text-tactical-orange transition-colors py-2 cursor-pointer whitespace-nowrap">
+              <span>Kategori</span>
+              <svg class="w-3.5 h-3.5 text-stone-400 group-hover:text-tactical-orange transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 top-full pt-2 w-56 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+              <div class="rounded-xl bg-tactical-surface border border-tactical-border shadow-2xl p-2 space-y-1 backdrop-blur-md">
+                <button onclick="setCategoryFilter('Jaket'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full text-left px-3 py-2 rounded-lg text-xs font-mono text-stone-300 hover:text-white hover:bg-tactical-card transition-colors flex items-center justify-between cursor-pointer">
+                  <span>🧥 Jaket & Gore-Tex</span>
+                  <span class="text-[10px] text-stone-500">6 item</span>
+                </button>
+                <button onclick="setCategoryFilter('Celana'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full text-left px-3 py-2 rounded-lg text-xs font-mono text-stone-300 hover:text-white hover:bg-tactical-card transition-colors flex items-center justify-between cursor-pointer">
+                  <span>👖 Celana Trekking</span>
+                  <span class="text-[10px] text-stone-500">4 item</span>
+                </button>
+                <button onclick="setCategoryFilter('Sepatu'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full text-left px-3 py-2 rounded-lg text-xs font-mono text-stone-300 hover:text-white hover:bg-tactical-card transition-colors flex items-center justify-between cursor-pointer">
+                  <span>🥾 Sepatu Trail & Vibram</span>
+                  <span class="text-[10px] text-stone-500">4 item</span>
+                </button>
+                <button onclick="setCategoryFilter('Tas'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full text-left px-3 py-2 rounded-lg text-xs font-mono text-stone-300 hover:text-white hover:bg-tactical-card transition-colors flex items-center justify-between cursor-pointer">
+                  <span>🎒 Tas & Carrier</span>
+                  <span class="text-[10px] text-stone-500">4 item</span>
+                </button>
+                <button onclick="setCategoryFilter('Baju'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full text-left px-3 py-2 rounded-lg text-xs font-mono text-stone-300 hover:text-white hover:bg-tactical-card transition-colors flex items-center justify-between cursor-pointer">
+                  <span>👕 Pakaian Quick-dry</span>
+                  <span class="text-[10px] text-stone-500">4 item</span>
+                </button>
+                <div class="pt-1 border-t border-tactical-border/60">
+                  <button onclick="setCategoryFilter('All'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full text-left px-3 py-2 rounded-lg text-xs font-mono font-bold text-tactical-orange hover:bg-tactical-card transition-colors flex items-center justify-between cursor-pointer">
+                    <span>⛰ Semua Gear Drop</span>
+                    <span class="text-[10px]">22 item &rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#lookbook-gallery" class="text-xs font-bold tracking-wider uppercase text-stone-300 hover:text-tactical-orange transition-colors whitespace-nowrap">
+            Lookbook
+          </a>
+          <a href="#lokasi-store" class="text-xs font-bold tracking-wider uppercase text-tactical-orange hover:text-white transition-colors whitespace-nowrap">
+            Basecamp
+          </a>
+        </nav>
+
+        <!-- Right Action Items (Compact) -->
+        <div class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
+          <!-- Palette / Color Theme Switcher Button -->
+          <button onclick="openPaletteModal()" id="paletteBtn" aria-label="Ganti Palet Warna" title="Ganti Palet Warna Basecamp" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-tactical-surface border border-tactical-border hover:border-tactical-orange text-stone-200 hover:text-white transition-all cursor-pointer">
+            <span class="w-2.5 h-2.5 rounded-full bg-tactical-orange shadow-[0_0_6px_rgba(var(--tactical-orange-rgb),0.6)]"></span>
+            <span class="text-xs font-mono font-bold tracking-tight">Palet</span>
+          </button>
+
+          <!-- Chat WA Button -->
+          <a href="https://wa.me/6281234567890?text=Halo%20Admin%20ThriftHaven%20Outdoor%20Sleman!%20Mau%20tanya%20ketersediaan%20gear%20outdoor%20terbaru." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-tactical-surface border border-tactical-border text-xs font-semibold text-stone-300 hover:border-tactical-orange hover:text-white transition-colors whitespace-nowrap">
+            <svg class="w-3.5 h-3.5 text-tactical-orange" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>Chat WA</span>
+          </a>
+
+          <!-- Cart Button -->
+          <button id="cartBtn" aria-label="Buka Keranjang Gear" class="relative p-2 rounded-lg bg-tactical-surface border border-tactical-border hover:border-tactical-orange text-white hover:text-tactical-orange transition-all cursor-pointer">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span id="cartCountBadge" class="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] px-1 flex items-center justify-center text-[10px] font-black bg-tactical-orange text-white rounded-full shadow">
+              0
+            </span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobileMenuBtn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-lg bg-tactical-surface border border-tactical-border text-stone-300 hover:text-white">
+            <svg id="hamburgerIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-tactical-border bg-tactical-surface px-6 py-6 space-y-4">
+      <div class="pb-3 border-b border-tactical-border">
+        <button onclick="openPaletteModal(); toggleMobileMenu(false);" class="w-full py-2.5 px-3 rounded-lg bg-tactical-card border border-tactical-border flex items-center justify-between text-left text-xs font-mono text-stone-200 hover:border-tactical-orange transition-colors">
+          <span class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-tactical-orange"></span>
+            <span class="font-bold">Palet Warna Toko:</span>
+          </span>
+          <span class="text-tactical-orange font-bold font-mono" id="currentPaletteLabelMobile">Obsidian Gorpcore &rarr;</span>
+        </button>
+      </div>
+      <a href="#latest-drop" class="mobile-nav-link block font-display font-bold text-lg text-white hover:text-tactical-orange">⛰ Drop Gear Minggu Ini</a>
+      <button onclick="setCategoryFilter('Jaket'); toggleMobileMenu(false);" class="mobile-nav-link block font-display font-bold text-lg text-stone-300 hover:text-tactical-orange text-left w-full">🧥 Jaket Outdoor & Gore-Tex</button>
+      <button onclick="setCategoryFilter('Celana'); toggleMobileMenu(false);" class="mobile-nav-link block font-display font-bold text-lg text-stone-300 hover:text-tactical-orange text-left w-full">👖 Celana Trekking & Cargo</button>
+      <button onclick="setCategoryFilter('Sepatu'); toggleMobileMenu(false);" class="mobile-nav-link block font-display font-bold text-lg text-stone-300 hover:text-tactical-orange text-left w-full">🥾 Sepatu Trail & Hiking</button>
+      <button onclick="setCategoryFilter('Tas'); toggleMobileMenu(false);" class="mobile-nav-link block font-display font-bold text-lg text-stone-300 hover:text-tactical-orange text-left w-full">🎒 Tas & Carrier Outdoor</button>
+      <button onclick="setCategoryFilter('Baju'); toggleMobileMenu(false);" class="mobile-nav-link block font-display font-bold text-lg text-stone-300 hover:text-tactical-orange text-left w-full">👕 Pakaian & Baselayer Quick-dry</button>
+      <a href="#lookbook-gallery" class="mobile-nav-link block font-display font-bold text-lg text-tactical-orange hover:text-white">📸 Lookbook & Referensi Style</a>
+      <a href="#why-us" class="mobile-nav-link block font-display font-bold text-lg text-stone-300 hover:text-tactical-orange">🛡 Standar Tes DWR & Membrane</a>
+      <a href="#what-they-say" class="mobile-nav-link block font-display font-bold text-lg text-stone-300 hover:text-tactical-orange">💬 Cerita Pendaki Jogja</a>
+      <a href="#outdoor-references" class="mobile-nav-link block font-display font-bold text-lg text-stone-300 hover:text-tactical-orange">🌐 Referensi Platform Inspo</a>
+      <a href="#lokasi-store" class="mobile-nav-link block font-display font-bold text-lg text-tactical-orange hover:text-white">📍 Basecamp Sleman Yogyakarta</a>
+    </div>
+  </header>
+
+  <!-- ================= 2. HERO SECTION ================= -->
+  <section class="relative overflow-hidden pt-10 pb-20 md:py-24 topo-bg">
+    <!-- Ambient Atmospheric Glows -->
+    <div class="absolute -top-24 right-1/4 w-[32rem] h-[32rem] rounded-full bg-tactical-orange/15 blur-[120px] pointer-events-none transition-colors duration-700"></div>
+    <div class="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-tactical-moss/10 blur-[100px] pointer-events-none transition-colors duration-700"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Text -->
+        <div class="lg:col-span-7 space-y-6 sm:space-y-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-tactical-surface border border-tactical-border text-xs uppercase tracking-wider font-mono text-tactical-orange">
+            <span class="w-2 h-2 rounded-full bg-tactical-orange animate-pulse"></span>
+            Drop Gear Batch #28 · Siap Jalur Merapi & Summit
+          </div>
+
+          <h1 class="font-display font-black text-4xl sm:text-5xl xl:text-6xl text-white tracking-tight uppercase leading-[1.08]">
+            Curated <span class="text-tactical-orange">Outdoor</span> & Mountain Gear Thrift<span class="text-tactical-orange">.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-300 max-w-xl leading-relaxed">
+            Kurasi perlengkapan outdoor bekas grade A: Jaket hardshell Gore-Tex, celana trekking ripstop, sepatu trail running, tas carrier ultralight, dan pakaian teknikal siap pakai. Lolos uji water repellent & sanitasi anti-bakteri.
+          </p>
+
+          <!-- Drop Timer Box -->
+          <div class="p-4 rounded-xl bg-tactical-surface border border-tactical-border max-w-lg">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono uppercase tracking-wider text-stone-400">⏱ Drop Gear Minggu Ini Berakhir Dalam:</span>
+              <span class="text-[11px] font-mono text-tactical-orange font-bold">1-of-1 Piece</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center font-mono">
+              <div class="p-2 rounded bg-tactical-black border border-tactical-border">
+                <span id="countdownHours" class="font-display font-black text-xl text-white block">07</span>
+                <span class="text-[9px] text-stone-400 uppercase">Jam</span>
+              </div>
+              <div class="p-2 rounded bg-tactical-black border border-tactical-border">
+                <span id="countdownMinutes" class="font-display font-black text-xl text-white block">38</span>
+                <span class="text-[9px] text-stone-400 uppercase">Menit</span>
+              </div>
+              <div class="p-2 rounded bg-tactical-black border border-tactical-border">
+                <span id="countdownSeconds" class="font-display font-black text-xl text-tactical-orange block">45</span>
+                <span class="text-[9px] text-stone-400 uppercase">Detik</span>
+              </div>
+              <div class="p-2 rounded bg-tactical-black border border-tactical-border flex flex-col justify-center items-center">
+                <span class="text-[10px] text-tactical-orange font-bold">SLEMAN HUB</span>
+                <span class="text-[8px] text-stone-400">Tested Waterproof</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="#latest-drop" class="inline-flex items-center justify-center px-8 py-4 font-display font-black text-sm uppercase tracking-wider bg-tactical-orange hover:bg-tactical-orangeHover text-white rounded-xl shadow-lg transition-all">
+              Jelajahi Drop Gear
+              <svg class="w-5 h-5 ml-2 -mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+            <a href="#lokasi-store" class="inline-flex items-center justify-center px-6 py-4 font-semibold text-sm text-stone-300 hover:text-white border border-tactical-border hover:border-tactical-orange rounded-xl transition-colors">
+              📍 Cek Toko di Sleman
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-6 border-t border-tactical-border grid grid-cols-3 gap-4 text-xs font-mono text-stone-400">
+            <div>
+              <p class="font-display font-bold text-white text-base">DWR Tested</p>
+              <p class="text-[11px]">Membrane Anti-Tembus</p>
+            </div>
+            <div>
+              <p class="font-display font-bold text-white text-base">Tech Wash</p>
+              <p class="text-[11px]">Higienis Khusus Outdoor</p>
+            </div>
+            <div>
+              <p class="font-display font-bold text-white text-base">Authentic</p>
+              <p class="text-[11px]">TNF, Arc'teryx, Salomon</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Box -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="rounded-2xl bg-tactical-surface border border-tactical-border p-3 shadow-2xl">
+              <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-tactical-card flex flex-col justify-between border border-tactical-border group">
+                
+                <!-- Real Outdoor Mountain Lookbook Photo with Resilient Fallback -->
+                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=900&q=80" alt="Arc'teryx Mountain Jacket" loading="lazy" referrerpolicy="no-referrer" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+
+                <!-- Fallback Container if offline -->
+                <div class="hidden absolute inset-0 flex items-center justify-center bg-tactical-card">
+                  <svg class="w-48 h-48 text-tactical-orange opacity-25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 20h18L15 6l-4 7-3-4-5 11z" />
+                  </svg>
+                </div>
+
+                <!-- Gradient Scrim for contrast -->
+                <div class="absolute inset-0 bg-gradient-to-t from-tactical-black via-tactical-black/40 to-black/30 pointer-events-none"></div>
+
+                <!-- Top Info -->
+                <div class="relative z-10 p-4 sm:p-5 flex items-center justify-between">
+                  <span class="px-2.5 py-1 rounded bg-tactical-black/90 text-tactical-orange text-xs font-mono font-bold tracking-wider border border-tactical-border backdrop-blur">
+                    MOUNTAIN SPECIMEN #01
+                  </span>
+                  <span class="px-2.5 py-1 rounded bg-tactical-black/90 text-tactical-moss text-xs font-mono font-bold border border-tactical-moss/50 backdrop-blur">
+                    Gore-Tex Pro 3L
+                  </span>
+                </div>
+
+                <!-- Bottom Unified Overlay -->
+                <div class="relative z-10 p-4 sm:p-5 space-y-3">
+                  <div class="space-y-1">
+                    <p class="text-[11px] uppercase font-mono tracking-widest text-tactical-orange font-bold">Summit Series Archive</p>
+                    <p class="font-display font-black text-xl sm:text-2xl uppercase tracking-tight text-white drop-shadow leading-tight">
+                      Arc'teryx Beta LT Shell
+                    </p>
+                    <p class="text-[11px] text-stone-300 font-mono drop-shadow">DWR Beading Pass · Seam Sealed 100%</p>
+                  </div>
+
+                  <!-- Floating Info -->
+                  <div class="p-3 rounded-lg bg-tactical-black/95 border border-tactical-border flex items-center justify-between backdrop-blur">
+                    <div>
+                      <span class="text-[10px] uppercase font-mono text-stone-400 block">Condition: 9.6/10 · Size M</span>
+                      <span class="font-display font-black text-white text-lg leading-tight">Rp 375.000</span>
+                    </div>
+                    <button onclick="addToCart(0)" class="px-3.5 py-2 rounded bg-tactical-orange hover:bg-tactical-orangeHover text-white font-display font-bold text-xs uppercase cursor-pointer transition-colors shadow">
+                      Ambil Gear
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. KATEGORI OUTDOOR GEAR ================= -->
+  <section id="categories" class="py-16 md:py-20 border-y border-tactical-border bg-tactical-surface/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="fade-observe flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-tactical-orange">Gear Taxonomy</span>
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight uppercase mt-1">
+            Kategori Perlengkapan Outdoor
+          </h2>
+        </div>
+        <p class="text-sm text-stone-400 mt-2 md:mt-0 max-w-md">
+          Pilah gear bekas berkualitas sesuai medan ekspedisi: mountaineering, trail running, camping ceria, hingga gorpcore daily wear.
+        </p>
+      </div>
+
+      <!-- 6 Tactical Outdoor Category Quick Filters (Balanced 2x3, 3x2, 6x1 Grid) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
+        
+        <!-- Cat 1: Jaket Outdoor -->
+        <div onclick="setCategoryFilter('Jaket')" style="transition-delay: 0ms;" class="category-card fade-observe group cursor-pointer rounded-xl bg-tactical-card border border-tactical-border p-5 hover:border-tactical-orange transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-4 group-hover:scale-105 transition-transform border border-tactical-border">
+              <!-- Jacket Shell Icon -->
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4l4-1h8l4 1v17H4V4z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M8 8l4 4 4-4" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+              Jaket Outdoor
+            </h3>
+            <p class="text-[11px] text-stone-400 mt-1 font-mono">Gore-Tex, hardshell, down & polar fleece</p>
+          </div>
+          <span class="text-[10px] font-mono text-tactical-slate mt-2 pt-2 border-t border-tactical-border/40 flex items-center justify-between">
+            <span>6 Item</span>
+            <span class="text-tactical-orange">&rarr;</span>
+          </span>
+        </div>
+
+        <!-- Cat 2: Celana Outdoor -->
+        <div onclick="setCategoryFilter('Celana')" style="transition-delay: 60ms;" class="category-card fade-observe group cursor-pointer rounded-xl bg-tactical-card border border-tactical-border p-5 hover:border-tactical-orange transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-4 group-hover:scale-105 transition-transform border border-tactical-border">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 3h12v5l-2 13h-3l-1-11-1 11H8L6 8V3z" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+              Celana Trekking
+            </h3>
+            <p class="text-[11px] text-stone-400 mt-1 font-mono">Convertible zip-off, ripstop & climbing</p>
+          </div>
+          <span class="text-[10px] font-mono text-tactical-slate mt-2 pt-2 border-t border-tactical-border/40 flex items-center justify-between">
+            <span>4 Item</span>
+            <span class="text-tactical-orange">&rarr;</span>
+          </span>
+        </div>
+
+        <!-- Cat 3: Sepatu Trail -->
+        <div onclick="setCategoryFilter('Sepatu')" style="transition-delay: 120ms;" class="category-card fade-observe group cursor-pointer rounded-xl bg-tactical-card border border-tactical-border p-5 hover:border-tactical-orange transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-4 group-hover:scale-105 transition-transform border border-tactical-border">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l4-2 7 2 7-3v4l-7 3-7-2-4 2v-4z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 6l5 6H5l3-6h6z" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+              Sepatu & Trail
+            </h3>
+            <p class="text-[11px] text-stone-400 mt-1 font-mono">Trail runners, Vibram sole & GTX hiking</p>
+          </div>
+          <span class="text-[10px] font-mono text-tactical-slate mt-2 pt-2 border-t border-tactical-border/40 flex items-center justify-between">
+            <span>4 Item</span>
+            <span class="text-tactical-orange">&rarr;</span>
+          </span>
+        </div>
+
+        <!-- Cat 4: Tas Outdoor -->
+        <div onclick="setCategoryFilter('Tas')" style="transition-delay: 180ms;" class="category-card fade-observe group cursor-pointer rounded-xl bg-tactical-card border border-tactical-border p-5 hover:border-tactical-orange transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-4 group-hover:scale-105 transition-transform border border-tactical-border">
+              <!-- Backpack Icon -->
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14v11a2 2 0 01-2 2H7a2 2 0 01-2-2V8zm4-4h6a2 2 0 012 2v2H7V6a2 2 0 012-2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 12h4" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+              Tas & Carrier
+            </h3>
+            <p class="text-[11px] text-stone-400 mt-1 font-mono">Daypacks 15-32L & summit 65L carrier</p>
+          </div>
+          <span class="text-[10px] font-mono text-tactical-slate mt-2 pt-2 border-t border-tactical-border/40 flex items-center justify-between">
+            <span>4 Item</span>
+            <span class="text-tactical-orange">&rarr;</span>
+          </span>
+        </div>
+
+        <!-- Cat 5: Baju Outdoor -->
+        <div onclick="setCategoryFilter('Baju')" style="transition-delay: 240ms;" class="category-card fade-observe group cursor-pointer rounded-xl bg-tactical-card border border-tactical-border p-5 hover:border-tactical-orange transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-4 group-hover:scale-105 transition-transform border border-tactical-border">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 3h12l3 5-3 3v10H6V11L3 8l3-5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 3v3a2 2 0 0 0 4 0V3" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+              Pakaian Quick-dry
+            </h3>
+            <p class="text-[11px] text-stone-400 mt-1 font-mono">Trekking shirts, baselayer & hoodies</p>
+          </div>
+          <span class="text-[10px] font-mono text-tactical-slate mt-2 pt-2 border-t border-tactical-border/40 flex items-center justify-between">
+            <span>4 Item</span>
+            <span class="text-tactical-orange">&rarr;</span>
+          </span>
+        </div>
+
+        <!-- Cat 6: Semua Gear Drop -->
+        <div onclick="setCategoryFilter('All')" style="transition-delay: 300ms;" class="category-card fade-observe group cursor-pointer rounded-xl bg-tactical-card border border-tactical-border p-5 hover:border-tactical-orange transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-4 group-hover:scale-105 transition-transform border border-tactical-border group-hover:border-tactical-orange">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 20h18L15 6l-4 7-3-4-5 11z" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+              Semua Gear
+            </h3>
+            <p class="text-[11px] text-stone-400 mt-1 font-mono">Katalog lengkap rilisan minggu ini</p>
+          </div>
+          <span class="text-[10px] font-mono text-tactical-orange font-bold mt-2 pt-2 border-t border-tactical-border/40 flex items-center justify-between group-hover:underline">
+            <span>22 Item</span>
+            <span>&rarr;</span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. ETALASE OUTDOOR THRIFT ================= -->
+  <section id="latest-drop" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">⛰</span>
+            <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight uppercase">
+              Curated Outdoor Gear Drop
+            </h2>
+          </div>
+          <p class="text-sm font-mono text-tactical-orange mt-1">
+            Harga Ramah Kelas Menengah & Mahasiswa: Mulai Rp 75.000 s/d Rp 385.000 · 1-of-1 Original Grade A!
+          </p>
+        </div>
+
+        <!-- Search & Sort Controls -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <div class="relative">
+            <input type="text" id="searchInput" placeholder="Cari brand, Gore-Tex, size..." oninput="handleSearch(this.value)" class="w-full sm:w-64 px-4 py-2.5 pl-9 rounded-lg bg-tactical-surface border border-tactical-border text-xs text-white placeholder-stone-500 focus:outline-none focus:border-tactical-orange" />
+            <svg class="w-4 h-4 text-stone-500 absolute left-3 top-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+
+          <select id="sortSelect" onchange="handleSort(this.value)" class="px-3 py-2.5 rounded-lg bg-tactical-surface border border-tactical-border text-xs text-stone-300 focus:outline-none focus:border-tactical-orange">
+            <option value="featured">Urutan: Rekomendasi</option>
+            <option value="price-asc">Harga: Terendah &rarr; Tertinggi</option>
+            <option value="price-desc">Harga: Tertinggi &rarr; Terendah</option>
+            <option value="condition">Kondisi Terbaik</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="flex flex-wrap items-center gap-2 mb-8 pb-3 border-b border-tactical-border">
+        <button onclick="setCategoryFilter('All')" id="pill-All" class="filter-pill px-4 py-2 rounded-lg text-xs font-mono font-bold uppercase transition-all bg-tactical-orange text-white">
+          Semua Gear (<span id="count-All">22</span>)
+        </button>
+        <button onclick="setCategoryFilter('Jaket')" id="pill-Jaket" class="filter-pill px-4 py-2 rounded-lg text-xs font-mono font-bold uppercase transition-all bg-tactical-surface text-stone-300 border border-tactical-border hover:border-stone-400">
+          Jaket (<span id="count-Jaket">6</span>)
+        </button>
+        <button onclick="setCategoryFilter('Celana')" id="pill-Celana" class="filter-pill px-4 py-2 rounded-lg text-xs font-mono font-bold uppercase transition-all bg-tactical-surface text-stone-300 border border-tactical-border hover:border-stone-400">
+          Celana (<span id="count-Celana">4</span>)
+        </button>
+        <button onclick="setCategoryFilter('Sepatu')" id="pill-Sepatu" class="filter-pill px-4 py-2 rounded-lg text-xs font-mono font-bold uppercase transition-all bg-tactical-surface text-stone-300 border border-tactical-border hover:border-stone-400">
+          Sepatu Trail (<span id="count-Sepatu">4</span>)
+        </button>
+        <button onclick="setCategoryFilter('Tas')" id="pill-Tas" class="filter-pill px-4 py-2 rounded-lg text-xs font-mono font-bold uppercase transition-all bg-tactical-surface text-stone-300 border border-tactical-border hover:border-stone-400">
+          Tas Carrier (<span id="count-Tas">4</span>)
+        </button>
+        <button onclick="setCategoryFilter('Baju')" id="pill-Baju" class="filter-pill px-4 py-2 rounded-lg text-xs font-mono font-bold uppercase transition-all bg-tactical-surface text-stone-300 border border-tactical-border hover:border-stone-400">
+          Pakaian/Baju (<span id="count-Baju">4</span>)
+        </button>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- No Results -->
+      <div id="noResultsState" class="hidden text-center py-16">
+        <p class="text-stone-400 font-mono text-sm">Tidak ada gear yang cocok dengan filter kamu.</p>
+        <button onclick="resetAllFilters()" class="mt-4 px-4 py-2 rounded bg-tactical-surface border border-tactical-border text-tactical-orange text-xs font-bold font-mono">
+          Reset Filter & Cari Lagi
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4B. LOOKBOOK & REFERENSI STYLE OUTDOOR (GORPCORE ARCHIVE) ================= -->
+  <section id="lookbook-gallery" class="py-20 border-t border-tactical-border bg-tactical-black relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center px-2 py-0.5 rounded bg-tactical-orange/20 text-tactical-orange text-[10px] font-mono font-bold uppercase tracking-wider">
+              Editorial Style Archive
+            </span>
+            <span class="text-xs font-mono text-stone-400">· Global Gorpcore Inspiration</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight uppercase mt-2">
+            Foto Referensi & Lookbook Style Outdoor
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-400 mt-2 max-w-2xl leading-relaxed">
+            Inspirasi visual memadukan gear outdoor teknikal (hardshell, cargo trekking, sneakers trail) untuk ekspedisi gunung maupun gaya urban harian di Yogyakarta. Klik look untuk menemukan gear terkait di etalase kami!
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="#latest-drop" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-tactical-surface border border-tactical-border text-xs font-mono font-bold text-tactical-orange hover:border-tactical-orange hover:text-white transition-colors">
+            <span>Buka Etalase Gear</span>
+            <span>&darr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 6 Lookbook Editorial Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Look 01 -->
+        <div style="transition-delay: 0ms;" class="group fade-observe rounded-2xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all duration-300 overflow-hidden flex flex-col justify-between">
+          <div class="relative aspect-[4/5] bg-tactical-surface overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80" alt="Summit Expedition Lookbook" loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+            <div class="hidden absolute inset-0 bg-tactical-card flex items-center justify-center p-6 text-center">
+              <svg class="w-20 h-20 text-tactical-orange opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 20h18L15 6l-4 7-3-4-5 11z"/></svg>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-tactical-black/90 via-tactical-black/20 to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded bg-tactical-black/90 text-tactical-orange text-[10px] font-mono font-bold border border-tactical-border backdrop-blur">
+                LOOK #01 · ALPINE STORM
+              </span>
+              <span class="px-2 py-0.5 rounded bg-tactical-black/80 text-stone-300 text-[10px] font-mono border border-tactical-border backdrop-blur">
+                Ref: Arc'teryx System_A
+              </span>
+            </div>
+
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 space-y-1">
+              <p class="text-[10px] font-mono text-tactical-moss font-bold uppercase">Layering: Shell 3L + Fleece</p>
+              <h3 class="font-display font-black text-xl text-white uppercase drop-shadow">
+                Summit Expedition Shell
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <p class="text-xs text-stone-400 leading-relaxed font-sans">
+              Jaket hardshell Gore-Tex dipadukan baselayer teknis untuk menahan terpaan angin badai dan kabut pekat di jalur puncak Merbabu atau Raung.
+            </p>
+            <button onclick="setCategoryFilter('Jaket'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full py-2.5 rounded-lg bg-tactical-surface hover:bg-tactical-orange text-stone-200 hover:text-white border border-tactical-border hover:border-tactical-orange font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+              <span>Filter Jaket Gunung</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Look 02 -->
+        <div style="transition-delay: 100ms;" class="group fade-observe rounded-2xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all duration-300 overflow-hidden flex flex-col justify-between">
+          <div class="relative aspect-[4/5] bg-tactical-surface overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80" alt="Gorpcore Daily Commuter" loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+            <div class="hidden absolute inset-0 bg-tactical-card flex items-center justify-center p-6 text-center">
+              <svg class="w-20 h-20 text-tactical-orange opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 20h18L15 6l-4 7-3-4-5 11z"/></svg>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-tactical-black/90 via-tactical-black/20 to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded bg-tactical-black/90 text-tactical-orange text-[10px] font-mono font-bold border border-tactical-border backdrop-blur">
+                LOOK #02 · SLEMAN GORPCORE
+              </span>
+              <span class="px-2 py-0.5 rounded bg-tactical-black/80 text-stone-300 text-[10px] font-mono border border-tactical-border backdrop-blur">
+                Ref: BEAMS Outdoor Style
+              </span>
+            </div>
+
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 space-y-1">
+              <p class="text-[10px] font-mono text-tactical-moss font-bold uppercase">Bottoms: Ripstop Gusset</p>
+              <h3 class="font-display font-black text-xl text-white uppercase drop-shadow">
+                Urban Trekking Cargo
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <p class="text-xs text-stone-400 leading-relaxed font-sans">
+              Celana panjat ber-gusset bebas gerak dipadukan kaos quick-dry. Sangat pas untuk mobilitas harian kampus UGM dan nongkrong kafe Jalan Kaliurang.
+            </p>
+            <button onclick="setCategoryFilter('Celana'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full py-2.5 rounded-lg bg-tactical-surface hover:bg-tactical-orange text-stone-200 hover:text-white border border-tactical-border hover:border-tactical-orange font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+              <span>Filter Celana Trekking</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Look 03 -->
+        <div style="transition-delay: 200ms;" class="group fade-observe rounded-2xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all duration-300 overflow-hidden flex flex-col justify-between">
+          <div class="relative aspect-[4/5] bg-tactical-surface overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=80" alt="Trail Running Kicks" loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+            <div class="hidden absolute inset-0 bg-tactical-card flex items-center justify-center p-6 text-center">
+              <svg class="w-20 h-20 text-tactical-orange opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 20h18L15 6l-4 7-3-4-5 11z"/></svg>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-tactical-black/90 via-tactical-black/20 to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded bg-tactical-black/90 text-tactical-orange text-[10px] font-mono font-bold border border-tactical-border backdrop-blur">
+                LOOK #03 · TRAIL TRACTION
+              </span>
+              <span class="px-2 py-0.5 rounded bg-tactical-black/80 text-stone-300 text-[10px] font-mono border border-tactical-border backdrop-blur">
+                Ref: Salomon Sportstyle
+              </span>
+            </div>
+
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 space-y-1">
+              <p class="text-[10px] font-mono text-tactical-moss font-bold uppercase">Footwear: Mud Contagrip</p>
+              <h3 class="font-display font-black text-xl text-white uppercase drop-shadow">
+                Ridge Runner & Scrambler
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <p class="text-xs text-stone-400 leading-relaxed font-sans">
+              Outsole lugs agresif Vibram atau Contagrip memberikan traksi gigit di tanjakan tanah merah dan bebatuan licin bukit Kaliurang.
+            </p>
+            <button onclick="setCategoryFilter('Sepatu'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full py-2.5 rounded-lg bg-tactical-surface hover:bg-tactical-orange text-stone-200 hover:text-white border border-tactical-border hover:border-tactical-orange font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+              <span>Filter Sepatu Trail</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Look 04 -->
+        <div style="transition-delay: 0ms;" class="group fade-observe rounded-2xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all duration-300 overflow-hidden flex flex-col justify-between">
+          <div class="relative aspect-[4/5] bg-tactical-surface overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" alt="Technical Summit Carrier" loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+            <div class="hidden absolute inset-0 bg-tactical-card flex items-center justify-center p-6 text-center">
+              <svg class="w-20 h-20 text-tactical-orange opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 20h18L15 6l-4 7-3-4-5 11z"/></svg>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-tactical-black/90 via-tactical-black/20 to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded bg-tactical-black/90 text-tactical-orange text-[10px] font-mono font-bold border border-tactical-border backdrop-blur">
+                LOOK #04 · PACK RIGGING
+              </span>
+              <span class="px-2 py-0.5 rounded bg-tactical-black/80 text-stone-300 text-[10px] font-mono border border-tactical-border backdrop-blur">
+                Ref: Osprey Technical
+              </span>
+            </div>
+
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 space-y-1">
+              <p class="text-[10px] font-mono text-tactical-moss font-bold uppercase">Gear: AirScape Backpanel</p>
+              <h3 class="font-display font-black text-xl text-white uppercase drop-shadow">
+                Summit Daypack 22L
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <p class="text-xs text-stone-400 leading-relaxed font-sans">
+              Daypack berventilasi busa ringan dengan tali dada darurat dan dudukan trekking pole. Ringkas untuk summit attack tanpa membebani punggung.
+            </p>
+            <button onclick="setCategoryFilter('Tas'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full py-2.5 rounded-lg bg-tactical-surface hover:bg-tactical-orange text-stone-200 hover:text-white border border-tactical-border hover:border-tactical-orange font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+              <span>Filter Tas & Carrier</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Look 05 -->
+        <div style="transition-delay: 100ms;" class="group fade-observe rounded-2xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all duration-300 overflow-hidden flex flex-col justify-between">
+          <div class="relative aspect-[4/5] bg-tactical-surface overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=800&q=80" alt="Polar Fleece Warmth" loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+            <div class="hidden absolute inset-0 bg-tactical-card flex items-center justify-center p-6 text-center">
+              <svg class="w-20 h-20 text-tactical-orange opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 20h18L15 6l-4 7-3-4-5 11z"/></svg>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-tactical-black/90 via-tactical-black/20 to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded bg-tactical-black/90 text-tactical-orange text-[10px] font-mono font-bold border border-tactical-border backdrop-blur">
+                LOOK #05 · CAMPFIRE COMFORT
+              </span>
+              <span class="px-2 py-0.5 rounded bg-tactical-black/80 text-stone-300 text-[10px] font-mono border border-tactical-border backdrop-blur">
+                Ref: Patagonia Worn Wear
+              </span>
+            </div>
+
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 space-y-1">
+              <p class="text-[10px] font-mono text-tactical-moss font-bold uppercase">Midlayer: Synchilla Fleece</p>
+              <h3 class="font-display font-black text-xl text-white uppercase drop-shadow">
+                Vintage Polar Pullover
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <p class="text-xs text-stone-400 leading-relaxed font-sans">
+              Material polar fleece lembut menyerap kehangatan saat suhu drop di tenda camp atau udara dingin malam di lereng utara Sleman.
+            </p>
+            <button onclick="setCategoryFilter('Baju'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full py-2.5 rounded-lg bg-tactical-surface hover:bg-tactical-orange text-stone-200 hover:text-white border border-tactical-border hover:border-tactical-orange font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+              <span>Filter Pakaian & Baselayer</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Look 06 -->
+        <div style="transition-delay: 200ms;" class="group fade-observe rounded-2xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all duration-300 overflow-hidden flex flex-col justify-between">
+          <div class="relative aspect-[4/5] bg-tactical-surface overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Ultralight Fastpacking" loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+            <div class="hidden absolute inset-0 bg-tactical-card flex items-center justify-center p-6 text-center">
+              <svg class="w-20 h-20 text-tactical-orange opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 20h18L15 6l-4 7-3-4-5 11z"/></svg>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-tactical-black/90 via-tactical-black/20 to-black/30 pointer-events-none"></div>
+            
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded bg-tactical-black/90 text-tactical-orange text-[10px] font-mono font-bold border border-tactical-border backdrop-blur">
+                LOOK #06 · FASTPACKING
+              </span>
+              <span class="px-2 py-0.5 rounded bg-tactical-black/80 text-stone-300 text-[10px] font-mono border border-tactical-border backdrop-blur">
+                Ref: Goldwin 0 Archive
+              </span>
+            </div>
+
+            <div class="absolute bottom-3.5 left-3.5 right-3.5 space-y-1">
+              <p class="text-[10px] font-mono text-tactical-moss font-bold uppercase">Weight: Packable 140g</p>
+              <h3 class="font-display font-black text-xl text-white uppercase drop-shadow">
+                Storm Windbreaker Shell
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <p class="text-xs text-stone-400 leading-relaxed font-sans">
+              Proteksi angin dan gerimis tipis super ringkas yang dapat dilipat ke kantong sendiri. Gear wajib pendaki efisien & pelari lintas alam.
+            </p>
+            <button onclick="setCategoryFilter('All'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="w-full py-2.5 rounded-lg bg-tactical-surface hover:bg-tactical-orange text-stone-200 hover:text-white border border-tactical-border hover:border-tactical-orange font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+              <span>Jelajahi Semua Gear (22)</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 5. VALUE PROPOSITION: OUTDOOR INSPECTION ================= -->
+  <section id="why-us" class="py-20 border-t border-tactical-border bg-tactical-surface/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-tactical-orange font-bold">Technical Standards</span>
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-tight mt-1">
+            Standar Kurasi Gear Outdoor
+          </h2>
+          <p class="text-stone-400 text-sm mt-2 max-w-xl leading-relaxed">
+            Membeli gear gunung bekas butuh jaminan keamanan fisik. Di Basecamp Sleman, setiap item melewati 3 tahap tes ketat sebelum masuk etalase.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-tactical-surface border border-tactical-border text-xs font-mono text-stone-300">
+          <span class="w-2 h-2 rounded-full bg-tactical-moss animate-pulse"></span>
+          <span>SOP Inspeksi Siap Jalur Merapi</span>
+        </div>
+      </div>
+
+      <!-- 3 Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="rounded-xl bg-tactical-card border border-tactical-border p-7 hover:border-tactical-orange transition-colors">
+          <div class="w-12 h-12 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-5 border border-tactical-border">
+            <!-- Water Droplet / DWR Icon -->
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-black text-lg text-white uppercase mb-2">
+            1. DWR Beading & Seam Inspection
+          </h3>
+          <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+            Semua jaket hardshell & celana rainproof dicek membran waterproof-nya (Gore-Tex, HyVent, DryVent, H2No). Dipastikan seam tape tidak delaminasi/mengelupas dan lolos water spray beading test.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-tactical-card border border-tactical-border p-7 hover:border-tactical-orange transition-colors">
+          <div class="w-12 h-12 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-5 border border-tactical-border">
+            <!-- Tech Wash Sanitized Icon -->
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-black text-lg text-white uppercase mb-2">
+            2. Nikwax Tech Wash & Sterilisasi
+          </h3>
+          <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+            Dicuci tanpa deterjen kimia perusak pori kain. Menggunakan cairan khusus <span class="text-stone-200 font-semibold">Tech Wash & Down Cleaner</span> plus sterilisasi uap anti-bakteri. Baju wangi, bersih higienis, siap langsung mendaki.
+          </p>
+        </div>
+
+        <div class="rounded-xl bg-tactical-card border border-tactical-border p-7 hover:border-tactical-orange transition-colors">
+          <div class="w-12 h-12 rounded-lg bg-tactical-surface flex items-center justify-center text-tactical-orange mb-5 border border-tactical-border">
+            <!-- Hardware / YKK Check Icon -->
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-black text-lg text-white uppercase mb-2">
+            3. Hardware & Sole Traction Check
+          </h3>
+          <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+            Resleting YKK Vislon/Aquaguard, velcro wrist strap, tali kur bungy, serta outsole Vibram/Contagrip sepatu diuji kelayakannya. Tidak ada resleting macet atau sol mati licin.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 5B. WHAT THEY SAY (Outdoor Testimonials) ================= -->
+  <section id="what-they-say" class="py-20 border-t border-tactical-border bg-tactical-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-tactical-orange">Trail Reviews</span>
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight uppercase mt-1">
+            What They Say
+          </h2>
+          <p class="text-sm text-stone-400 mt-2 max-w-xl">
+            Cerita jujur para pendaki, pelari lintas alam, dan penggiat outdoor di Sleman & Yogyakarta.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 bg-tactical-surface border border-tactical-border px-4 py-2 rounded-lg">
+          <div class="text-amber-400 text-sm tracking-wider">
+            ★★★★★
+          </div>
+          <span class="text-xs font-mono text-stone-300">
+            <strong class="text-white">4.9 / 5.0</strong> dari 240+ Pendaki Jogja
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="rounded-xl bg-tactical-card border border-tactical-border p-6 flex flex-col justify-between hover:border-tactical-orange transition-all">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="text-amber-400 text-sm">★★★★★</div>
+              <span class="text-[11px] font-mono text-tactical-orange font-semibold">Verified Gear</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed">
+              "Beli jaket Arc'teryx Beta LT di sini langsung saya tes summit Merbabu via Suwanting pas badai kabut tebal. Gore-Tex beading-nya beneran masih jalan air langsung meluncur. Seam seal masih rapat banget. Basecamp Sleman juara!"
+            </p>
+            <div class="text-[11px] font-mono text-stone-400 pt-2 border-t border-tactical-border">
+              Gear: <span class="text-stone-200">Arc'teryx Beta LT Gore-Tex</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 pt-4 mt-3 border-t border-tactical-border">
+            <div class="w-10 h-10 rounded-full bg-tactical-surface border border-tactical-orange flex items-center justify-center font-display font-black text-tactical-orange text-xs">
+              BP
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">Bagas Prasetyo</h4>
+              <p class="text-[11px] text-stone-400 font-mono">Mapala UGM · Sleman, Yogyakarta</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="rounded-xl bg-tactical-card border border-tactical-border p-6 flex flex-col justify-between hover:border-tactical-orange transition-all">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="text-amber-400 text-sm">★★★★★</div>
+              <span class="text-[11px] font-mono text-tactical-orange font-semibold">Verified Gear</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed">
+              "Sepatu Salomon XT-6 bekas tapi outsole Contagrip-nya masih tebal 90%. Udah dipakai lari trail di lereng Kaliurang tanjakan licin tetap gigit. Sepatunya wangi dan bersih ga ada sisa tanah kotor bekas pemilik sebelumnya."
+            </p>
+            <div class="text-[11px] font-mono text-stone-400 pt-2 border-t border-tactical-border">
+              Gear: <span class="text-stone-200">Salomon XT-6 Gore-Tex Trail</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 pt-4 mt-3 border-t border-tactical-border">
+            <div class="w-10 h-10 rounded-full bg-tactical-surface border border-tactical-orange flex items-center justify-center font-display font-black text-tactical-orange text-xs">
+              AD
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">Aditya Danu</h4>
+              <p class="text-[11px] text-stone-400 font-mono">Trail Runner Jogja · Seturan, Sleman</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="rounded-xl bg-tactical-card border border-tactical-border p-6 flex flex-col justify-between hover:border-tactical-orange transition-all">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="text-amber-400 text-sm">★★★★★</div>
+              <span class="text-[11px] font-mono text-tactical-orange font-semibold">Verified Gear</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed">
+              "Dapet carrier Osprey Talon 22L kondisi prima tanpa minus sobek, backpanel AirScape masih kencang empuk. Lokasi store di Jakal Sleman strategis banget, enak bisa mampir fitting dulu sebelum naik ke pos pendakian."
+            </p>
+            <div class="text-[11px] font-mono text-stone-400 pt-2 border-t border-tactical-border">
+              Gear: <span class="text-stone-200">Osprey Talon 22L Technical Backpack</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 pt-4 mt-3 border-t border-tactical-border">
+            <div class="w-10 h-10 rounded-full bg-tactical-surface border border-tactical-orange flex items-center justify-center font-display font-black text-tactical-orange text-xs">
+              KW
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">Karin Wulandari</h4>
+              <p class="text-[11px] text-stone-400 font-mono">Outdoor Enthusiast · Depok, Sleman</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 5C. REFERENSI & INSPIRASI PLATFORM OUTDOOR ================= -->
+  <section id="outdoor-references" class="py-16 border-t border-tactical-border bg-tactical-surface/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-3">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-tactical-orange">Global Standards & Inspo</span>
+          <h2 class="font-display font-black text-2xl sm:text-3xl text-white tracking-tight uppercase mt-1">
+            Referensi Kurasi & Standar Platform Outdoor
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-400 mt-1 max-w-xl">
+            ThriftHaven Sleman mengacu pada standar kurasi sirkular dan editorial gear gunung internasional:
+          </p>
+        </div>
+        <span class="text-xs font-mono text-tactical-slate">
+          Inspirasi Kurasi Gorpcore & Mountain Archive
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Ref 1 -->
+        <a href="https://www.arcteryx.com" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-tactical-orange uppercase">Official Renewal</span>
+            <span class="text-stone-500 group-hover:text-tactical-orange transition-colors">&nearr;</span>
+          </div>
+          <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+            Arc'teryx ReGEAR™
+          </h3>
+          <p class="text-xs text-stone-400 mt-1.5 leading-relaxed font-sans">
+            Standar global inspeksi membran Gore-Tex 3-layer, restorasi DWR beading, dan program sirkular jaket gunung premium.
+          </p>
+          <span class="text-[11px] font-mono text-stone-500 mt-3 block group-hover:underline">arcteryx.com/regear</span>
+        </a>
+
+        <!-- Ref 2 -->
+        <a href="https://wornwear.patagonia.com" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-tactical-moss uppercase">Circular Pioneer</span>
+            <span class="text-stone-500 group-hover:text-tactical-orange transition-colors">&nearr;</span>
+          </div>
+          <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+            Patagonia Worn Wear®
+          </h3>
+          <p class="text-xs text-stone-400 mt-1.5 leading-relaxed font-sans">
+            Pelopor ekonomi sirkular pakaian alam bebas. Sertifikasi pre-owned fleece, jacket repair, dan kampanye anti-limbah tekstil bumi.
+          </p>
+          <span class="text-[11px] font-mono text-stone-500 mt-3 block group-hover:underline">wornwear.patagonia.com</span>
+        </a>
+
+        <!-- Ref 3 -->
+        <a href="https://havenshop.com" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-tactical-orange uppercase">Gorpcore Editorial</span>
+            <span class="text-stone-500 group-hover:text-tactical-orange transition-colors">&nearr;</span>
+          </div>
+          <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+            HAVEN Gorpcore Archive
+          </h3>
+          <p class="text-xs text-stone-400 mt-1.5 leading-relaxed font-sans">
+            Pusat editorial teknikal apparel: perpaduan material Cordura, Arc'teryx Veilance, Salomon Advanced, dan fungsionalitas ekstrem.
+          </p>
+          <span class="text-[11px] font-mono text-stone-500 mt-3 block group-hover:underline">havenshop.com</span>
+        </a>
+
+        <!-- Ref 4 -->
+        <a href="https://www.endclothing.com" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-stone-300 uppercase">Outdoor Lifestyle</span>
+            <span class="text-stone-500 group-hover:text-tactical-orange transition-colors">&nearr;</span>
+          </div>
+          <h3 class="font-display font-bold text-base text-white group-hover:text-tactical-orange transition-colors">
+            END. The Great Outdoors
+          </h3>
+          <p class="text-xs text-stone-400 mt-1.5 leading-relaxed font-sans">
+            Koleksi kurasi sepatu trail running, tas carrier ultralight, dan pakaian hiking dari The North Face, Gramicci, hingga Hoka.
+          </p>
+          <span class="text-[11px] font-mono text-stone-500 mt-3 block group-hover:underline">endclothing.com/features</span>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 5D. LOKASI TOKO BASECAMP SLEMAN ================= -->
+  <section id="lokasi-store" class="py-20 border-t border-tactical-border bg-tactical-surface/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="rounded-2xl bg-tactical-surface border border-tactical-border overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <div class="lg:col-span-7 p-8 sm:p-12 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-tactical-black border border-tactical-border text-xs font-mono text-tactical-orange font-bold uppercase">
+              <span class="w-2 h-2 rounded-full bg-tactical-orange animate-pulse"></span>
+              Basecamp Offline Store Sleman
+            </div>
+            <h3 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">
+              Kunjungi Basecamp ThriftHaven Sleman
+            </h3>
+            <p class="text-stone-300 text-sm leading-relaxed">
+              Mau cek langsung ketebalan down jacket, coba fitting celana trekking, atau cek traksi sol sepatu trail? Mampir langsung ke ruko store kami di Jalan Kaliurang, jalur utama pendakian Gunung Merapi!
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-lg bg-tactical-card border border-tactical-border">
+                <h4 class="font-display font-bold text-white text-sm">Alamat Lengkap Ruko:</h4>
+                <p class="text-xs text-stone-300 mt-1 leading-relaxed">
+                  Ruko Kaliurang Square Kav. 08,<br />
+                  Jl. Kaliurang KM 5.5, Manggung, Caturtunggal,<br />
+                  Kec. Depok, Kabupaten Sleman, D.I. Yogyakarta 55281
+                </p>
+                <p class="text-[11px] font-mono text-stone-500 mt-1">Patokan: 500m utara Ring Road Utara, dekat UGM</p>
+              </div>
+
+              <div class="p-4 rounded-lg bg-tactical-card border border-tactical-border">
+                <h4 class="font-display font-bold text-white text-sm">Jam Operasional:</h4>
+                <p class="text-xs text-stone-300 mt-1 leading-relaxed">
+                  <strong class="text-tactical-orange">Senin - Minggu:</strong> 10:00 - 22:00 WIB<br />
+                  Jadwal Drop Gear: Setiap Jumat Malam 19:30 WIB
+                </p>
+                <div class="mt-2 text-[11px] text-tactical-moss font-mono flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-tactical-moss"></span>
+                  Fitting Room & Area Cek DWR Ready
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Kaliurang+KM+5.5+Depok+Sleman+Yogyakarta" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-tactical-orange hover:bg-tactical-orangeHover text-white font-display font-bold text-xs uppercase tracking-wider transition-all">
+                Buka Petunjuk Arah Google Maps
+              </a>
+              <a href="https://wa.me/6281234567890?text=Halo%20ThriftHaven%20Sleman,%20saya%20mau%20mampir%20fitting%20gear%20hari%20ini." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl bg-tactical-black border border-tactical-border text-stone-300 hover:text-white font-semibold text-xs transition-colors">
+                Chat Admin Basecamp WA
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-tactical-card border-t lg:border-t-0 lg:border-l border-tactical-border p-8 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="text-xs font-mono uppercase tracking-widest text-tactical-orange">Strategic Mountain Waypoint</span>
+              <h4 class="font-display font-black text-2xl text-white uppercase">Sleman Outdoor Corridor</h4>
+              <p class="text-xs text-stone-400 leading-relaxed">
+                Jalur favorit pegiat alam terbuka Yogyakarta sebelum bertolak ke Gunung Merapi, Gunung Merbabu, bukit Plawangan Kaliurang, atau ekspedisi luar Jawa.
+              </p>
+            </div>
+
+            <div class="my-6 p-5 rounded-xl bg-tactical-black border border-tactical-border text-center space-y-2">
+              <div class="w-12 h-12 rounded-full bg-tactical-surface mx-auto flex items-center justify-center text-tactical-orange">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <p class="font-display font-black text-white text-base">THRIFTHAVEN OUTDOOR</p>
+              <p class="text-xs font-mono text-tactical-orange">RUKO KALIURANG SQUARE #08 SLEMAN</p>
+              <p class="text-[11px] text-stone-400">Parkir Mobil & Motor Luas · Free Steaming Gear</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-tactical-black/80 border border-tactical-border flex items-center justify-between text-xs text-stone-400 font-mono">
+              <span>Status Store:</span>
+              <span class="text-tactical-moss font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-tactical-moss animate-ping"></span>
+                Buka (10:00 - 22:00 WIB)
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 6. FOOTER ================= -->
+  <footer class="bg-tactical-black border-t border-tactical-border pt-16 pb-12 relative overflow-hidden">
+    <!-- Subtle Ambient Footer Glow -->
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-tactical-orange/5 blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Main Footer 4-Column Grid (Isolated & Non-overlapping) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 xl:gap-10 pb-12 border-b border-tactical-border">
+        
+        <!-- Column 1: Brand & Verification -->
+        <div class="min-w-0 space-y-4">
+          <a href="#" class="flex items-center gap-2 group">
+            <div class="w-9 h-9 rounded-lg bg-tactical-surface border border-tactical-border flex items-center justify-center text-tactical-orange group-hover:border-tactical-orange transition-colors flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 20h18L15 6l-4 7-3-4-5 11z" />
+              </svg>
+            </div>
+            <div class="flex flex-col justify-center min-w-0">
+              <div class="flex items-center gap-1.5 leading-none">
+                <span class="font-display font-black text-lg tracking-tight text-white group-hover:text-tactical-orange transition-colors">THRIFTHAVEN</span>
+                <span class="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-tactical-orange/20 text-tactical-orange border border-tactical-orange/40">OUTDOOR</span>
+              </div>
+              <span class="block text-[8px] sm:text-[9px] font-mono tracking-wider text-tactical-slate uppercase mt-1 leading-none">
+                Mountain Gear Archive · Sleman
+              </span>
+            </div>
+          </a>
+
+          <p class="text-xs sm:text-sm text-stone-400 max-w-sm leading-relaxed">
+            Kurasi perlengkapan outdoor bekas grade A dan gorpcore apparel pilihan di Sleman, Yogyakarta. Memberikan masa pakai kedua bagi mountain gear tanpa menghasilkan limbah berlebih.
+          </p>
+
+          <div class="space-y-1.5 text-xs font-mono text-stone-300 pt-1">
+            <div class="flex items-center gap-2">
+              <span class="text-tactical-moss font-bold">✓</span>
+              <span>100% Lolos Uji DWR Beading & Seam Tape</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-tactical-moss font-bold">✓</span>
+              <span>Higienis Khusus Nikwax Tech Wash</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-tactical-moss font-bold">✓</span>
+              <span>Garansi 7 Hari Fitting di Basecamp Sleman</span>
+            </div>
+          </div>
+
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-tactical-surface border border-tactical-border text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-tactical-moss animate-pulse"></span>
+            <span class="text-stone-300">Basecamp:</span>
+            <strong class="text-tactical-orange">Buka 10:00 - 22:00 WIB</strong>
+          </div>
+        </div>
+
+        <!-- Column 2: Kategori Gear -->
+        <div class="min-w-0 space-y-3">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-tactical-orange"></span>
+            Koleksi Drop Gear
+          </h4>
+          <ul class="space-y-2 text-xs font-mono text-stone-400">
+            <li>
+              <button onclick="setCategoryFilter('Jaket'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="hover:text-tactical-orange flex items-center justify-between w-full group py-0.5 text-left cursor-pointer">
+                <span class="group-hover:translate-x-1 transition-transform">🧥 Jaket Outdoor & Shell</span>
+                <span class="text-[11px] text-stone-500">6 Item &rarr;</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="setCategoryFilter('Celana'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="hover:text-tactical-orange flex items-center justify-between w-full group py-0.5 text-left cursor-pointer">
+                <span class="group-hover:translate-x-1 transition-transform">👖 Celana Trekking & Cargo</span>
+                <span class="text-[11px] text-stone-500">4 Item &rarr;</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="setCategoryFilter('Sepatu'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="hover:text-tactical-orange flex items-center justify-between w-full group py-0.5 text-left cursor-pointer">
+                <span class="group-hover:translate-x-1 transition-transform">🥾 Sepatu Trail & Vibram</span>
+                <span class="text-[11px] text-stone-500">4 Item &rarr;</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="setCategoryFilter('Tas'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="hover:text-tactical-orange flex items-center justify-between w-full group py-0.5 text-left cursor-pointer">
+                <span class="group-hover:translate-x-1 transition-transform">🎒 Tas Carrier & Daypack</span>
+                <span class="text-[11px] text-stone-500">4 Item &rarr;</span>
+              </button>
+            </li>
+            <li>
+              <button onclick="setCategoryFilter('Baju'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="hover:text-tactical-orange flex items-center justify-between w-full group py-0.5 text-left cursor-pointer">
+                <span class="group-hover:translate-x-1 transition-transform">👕 Pakaian & Baselayer</span>
+                <span class="text-[11px] text-stone-500">4 Item &rarr;</span>
+              </button>
+            </li>
+            <li class="pt-1.5 border-t border-tactical-border/60">
+              <button onclick="setCategoryFilter('All'); document.getElementById('latest-drop').scrollIntoView({behavior:'smooth'});" class="text-tactical-orange hover:underline font-bold flex items-center justify-between w-full py-0.5 text-left cursor-pointer">
+                <span>⛰ Jelajahi Semua Gear</span>
+                <span>22 Item &rarr;</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Navigasi & Layanan -->
+        <div class="min-w-0 space-y-3">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-tactical-orange"></span>
+            Eksplorasi Toko
+          </h4>
+          <ul class="space-y-2 text-xs font-mono text-stone-400">
+            <li><a href="#lookbook-gallery" class="hover:text-tactical-orange block py-0.5 hover:translate-x-1 transition-transform">📸 Lookbook Inspo</a></li>
+            <li><a href="#why-us" class="hover:text-tactical-orange block py-0.5 hover:translate-x-1 transition-transform">🛡 Standar Tes DWR</a></li>
+            <li><a href="#what-they-say" class="hover:text-tactical-orange block py-0.5 hover:translate-x-1 transition-transform">💬 Cerita Pendaki</a></li>
+            <li><a href="#outdoor-references" class="hover:text-tactical-orange block py-0.5 hover:translate-x-1 transition-transform">🌐 Referensi Global</a></li>
+            <li><a href="#lokasi-store" class="hover:text-tactical-orange block py-0.5 hover:translate-x-1 transition-transform">📍 Rute Basecamp</a></li>
+            <li class="pt-1.5 border-t border-tactical-border/60">
+              <button onclick="openPaletteModal()" class="text-stone-300 hover:text-tactical-orange flex items-center gap-1.5 py-0.5 cursor-pointer">
+                <span class="w-2.5 h-2.5 rounded-full bg-tactical-orange"></span>
+                <span>Ubah Palet Warna</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Basecamp & Kontak -->
+        <div class="min-w-0 space-y-3">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-tactical-orange"></span>
+            Basecamp & Kontak
+          </h4>
+          
+          <div class="p-3.5 rounded-xl bg-tactical-card border border-tactical-border space-y-1.5 text-xs text-stone-300">
+            <p class="font-display font-bold text-white text-sm">Basecamp Sleman Store</p>
+            <p class="text-stone-400 leading-relaxed text-[11px]">
+              Ruko Kaliurang Square Kav. 08, Jl. Kaliurang KM 5.5, Depok, Sleman, D.I. Yogyakarta 55281
+            </p>
+            <p class="text-[10px] font-mono text-tactical-orange pt-1">
+              Patokan: 500m utara Ring Road Utara, dekat UGM
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2 pt-1">
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20ThriftHaven%20Sleman!%20Mau%20tanya%20ketersediaan%20gear%20hari%20ini." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-lg bg-tactical-surface hover:bg-tactical-orange border border-tactical-border hover:border-tactical-orange text-stone-200 hover:text-white text-xs font-mono font-bold flex items-center justify-center gap-2 transition-all">
+              <svg class="w-4 h-4 text-tactical-orange" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span>Chat WhatsApp Basecamp</span>
+            </a>
+            <div class="flex items-center gap-2">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-2.5 rounded-lg bg-tactical-surface border border-tactical-border hover:border-tactical-orange text-stone-300 hover:text-white text-[11px] font-mono text-center transition-colors">
+                Instagram
+              </a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-2.5 rounded-lg bg-tactical-surface border border-tactical-border hover:border-tactical-orange text-stone-300 hover:text-white text-[11px] font-mono text-center transition-colors">
+                TikTok
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Kaliurang+KM+5.5+Depok+Sleman+Yogyakarta" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-2.5 rounded-lg bg-tactical-surface border border-tactical-border hover:border-tactical-orange text-stone-300 hover:text-white text-[11px] font-mono text-center transition-colors">
+                Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sub-Footer Bottom Bar -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-stone-400">
+        <div class="flex flex-wrap items-center gap-3 text-center md:text-left">
+          <span>&copy; 2026 ThriftHaven Outdoor Sleman.</span>
+          <span class="text-stone-600 hidden sm:inline">|</span>
+          <span class="text-stone-300">Curated Mountain & Gorpcore Gear Archive</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded bg-tactical-surface border border-tactical-border text-[11px] text-stone-300">
+            🌱 Leave No Trace · Sleman, DIY
+          </span>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-3 py-1 rounded bg-tactical-surface border border-tactical-border hover:border-tactical-orange text-tactical-orange hover:text-white text-xs font-bold transition-all flex items-center gap-1 cursor-pointer" title="Kembali ke Atas">
+            <span>Atas</span>
+            <span>&uarr;</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= PALETTE SELECTION MODAL ================= -->
+  <div id="paletteModalBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-200 flex items-center justify-center p-4">
+    <div id="paletteModal" class="bg-tactical-surface border border-tactical-border rounded-2xl max-w-xl w-full p-6 sm:p-8 transform scale-95 transition-transform duration-200 relative shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-tactical-orange animate-pulse"></span>
+            <span class="text-[11px] font-mono text-tactical-orange font-bold uppercase tracking-widest">Basecamp Colorways</span>
+          </div>
+          <h3 class="font-display font-black text-2xl text-white uppercase tracking-tight mt-1">
+            Upgrade & Pilih Palet Warna
+          </h3>
+          <p class="text-xs text-stone-400 mt-1">
+            Pilih skema warna atmosferik outdoor ThriftHaven Sleman sesuai preferensi estetikamu.
+          </p>
+        </div>
+        <button onclick="closePaletteModal()" class="p-2 rounded-lg bg-tactical-card text-stone-400 hover:text-white border border-tactical-border hover:border-tactical-orange transition-colors cursor-pointer" aria-label="Tutup Palet">
+          ✕
+        </button>
+      </div>
+
+      <!-- 4 Palette Options -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        
+        <!-- Palette 1: Obsidian Gorpcore -->
+        <button onclick="selectTheme('obsidian')" class="theme-card text-left p-4 rounded-xl border transition-all cursor-pointer relative overflow-hidden group bg-[#090a0c] border-[#232933] hover:border-[#ff5c1c]" data-theme-name="obsidian">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-display font-black text-sm text-white uppercase">Obsidian Gorpcore</span>
+            <span class="theme-check hidden text-[11px] font-mono text-[#ff5c1c] font-bold">✓ Aktif</span>
+          </div>
+          <p class="text-[11px] text-stone-400 mb-3 leading-relaxed">
+            Ultra-deep carbon obsidian, titanium slate, dan pendaran safety blaze summit flare.
+          </p>
+          <div class="flex items-center gap-1.5 pt-2 border-t border-white/10">
+            <span class="w-6 h-6 rounded-md bg-[#090a0c] border border-white/20" title="Canvas #090a0c"></span>
+            <span class="w-6 h-6 rounded-md bg-[#161a20] border border-white/20" title="Card #161a20"></span>
+            <span class="w-6 h-6 rounded-md bg-[#ff5c1c] shadow" title="Summit Flare #ff5c1c"></span>
+            <span class="w-6 h-6 rounded-md bg-[#10b981]" title="Alpine Emerald #10b981"></span>
+            <span class="text-[10px] font-mono text-stone-500 ml-auto font-bold">Arc'teryx Vibe</span>
+          </div>
+        </button>
+
+        <!-- Palette 2: Merapi Volcanic Magma -->
+        <button onclick="selectTheme('volcano')" class="theme-card text-left p-4 rounded-xl border transition-all cursor-pointer relative overflow-hidden group bg-[#0a090b] border-[#35252e] hover:border-[#f43f5e]" data-theme-name="volcano">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-display font-black text-sm text-white uppercase">Merapi Volcanic</span>
+            <span class="theme-check hidden text-[11px] font-mono text-[#f43f5e] font-bold">✓ Aktif</span>
+          </div>
+          <p class="text-[11px] text-stone-400 mb-3 leading-relaxed">
+            Basalt bebatuan vulkanik Sleman dengan aksen lava crimson & bara sulfur.
+          </p>
+          <div class="flex items-center gap-1.5 pt-2 border-t border-white/10">
+            <span class="w-6 h-6 rounded-md bg-[#0a090b] border border-white/20" title="Basalt #0a090b"></span>
+            <span class="w-6 h-6 rounded-md bg-[#1c181e] border border-white/20" title="Lava Card #1c181e"></span>
+            <span class="w-6 h-6 rounded-md bg-[#f43f5e] shadow" title="Lava Crimson #f43f5e"></span>
+            <span class="w-6 h-6 rounded-md bg-[#f59e0b]" title="Sulfur #f59e0b"></span>
+            <span class="text-[10px] font-mono text-stone-500 ml-auto font-bold">Merapi Vibe</span>
+          </div>
+        </button>
+
+        <!-- Palette 3: Pine Ridge Forest Ranger -->
+        <button onclick="selectTheme('forest')" class="theme-card text-left p-4 rounded-xl border transition-all cursor-pointer relative overflow-hidden group bg-[#060d09] border-[#22382c] hover:border-[#f97316]" data-theme-name="forest">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-display font-black text-sm text-white uppercase">Pine Ridge Forest</span>
+            <span class="theme-check hidden text-[11px] font-mono text-[#f97316] font-bold">✓ Aktif</span>
+          </div>
+          <p class="text-[11px] text-stone-400 mb-3 leading-relaxed">
+            Hutan cemara pinus lereng Kaliurang dengan aksen hunter safety amber klasik.
+          </p>
+          <div class="flex items-center gap-1.5 pt-2 border-t border-white/10">
+            <span class="w-6 h-6 rounded-md bg-[#060d09] border border-white/20" title="Pine #060d09"></span>
+            <span class="w-6 h-6 rounded-md bg-[#132219] border border-white/20" title="Needle #132219"></span>
+            <span class="w-6 h-6 rounded-md bg-[#f97316] shadow" title="Hunter Amber #f97316"></span>
+            <span class="w-6 h-6 rounded-md bg-[#22c55e]" title="Lichen #22c55e"></span>
+            <span class="text-[10px] font-mono text-stone-500 ml-auto font-bold">Ranger Vibe</span>
+          </div>
+        </button>
+
+        <!-- Palette 4: Arctic Glacial Summit -->
+        <button onclick="selectTheme('glacial')" class="theme-card text-left p-4 rounded-xl border transition-all cursor-pointer relative overflow-hidden group bg-[#070b10] border-[#203144] hover:border-[#06b6d4]" data-theme-name="glacial">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-display font-black text-sm text-white uppercase">Arctic Glacial</span>
+            <span class="theme-check hidden text-[11px] font-mono text-[#06b6d4] font-bold">✓ Aktif</span>
+          </div>
+          <p class="text-[11px] text-stone-400 mb-3 leading-relaxed">
+            Puncak salju abadi, nuansa gletser es biru, dan pendaran sian elektrik.
+          </p>
+          <div class="flex items-center gap-1.5 pt-2 border-t border-white/10">
+            <span class="w-6 h-6 rounded-md bg-[#070b10] border border-white/20" title="Polar #070b10"></span>
+            <span class="w-6 h-6 rounded-md bg-[#131f2d] border border-white/20" title="Frost #131f2d"></span>
+            <span class="w-6 h-6 rounded-md bg-[#06b6d4] shadow" title="Glacial Cyan #06b6d4"></span>
+            <span class="w-6 h-6 rounded-md bg-[#10b981]" title="Aurora #10b981"></span>
+            <span class="text-[10px] font-mono text-stone-500 ml-auto font-bold">Alpine Ice</span>
+          </div>
+        </button>
+
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-tactical-black border border-tactical-border flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-mono text-stone-400">
+        <span class="flex items-center gap-1.5">
+          <span class="text-tactical-orange font-bold">✓</span>
+          <span>Palet tersimpan otomatis di browser kamu.</span>
+        </span>
+        <button onclick="closePaletteModal()" class="w-full sm:w-auto px-4 py-2 rounded-lg bg-tactical-orange hover:bg-tactical-orangeHover text-white font-bold uppercase tracking-wider text-[11px] cursor-pointer transition-colors">
+          Gunakan Palet Ini
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL QUICK VIEW ================= -->
+  <div id="quickViewBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-200 flex items-center justify-center p-4">
+    <div id="quickViewModal" class="bg-tactical-surface border border-tactical-border rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-200 relative shadow-2xl">
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 z-20 p-2 rounded bg-tactical-card text-stone-400 hover:text-white border border-tactical-border">
+        ✕
+      </button>
+      <div id="quickViewContent" class="p-6 sm:p-8"></div>
+    </div>
+  </div>
+
+  <!-- ================= SLIDE-OVER CART DRAWER ================= -->
+  <div id="cartBackdrop" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-200"></div>
+
+  <div id="cartDrawer" class="fixed top-0 right-0 w-full sm:w-[460px] h-full bg-tactical-surface border-l border-tactical-border z-50 transform translate-x-full transition-transform duration-200 ease-in-out flex flex-col shadow-2xl">
+    
+    <div class="p-6 border-b border-tactical-border flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-black text-xl text-white uppercase">Keranjang Gear Outdoor</span>
+        <span id="drawerCountBadge" class="px-2 py-0.5 text-xs font-mono font-bold bg-tactical-orange text-white rounded">0</span>
+      </div>
+      <button id="closeCartBtn" class="p-2 text-stone-400 hover:text-white rounded hover:bg-tactical-card">
+        ✕
+      </button>
+    </div>
+
+    <div id="cartItemsList" class="flex-1 overflow-y-auto p-6 space-y-4">
+      <div id="emptyCartState" class="h-full flex flex-col items-center justify-center text-center py-12 space-y-3">
+        <div class="w-14 h-14 rounded-full bg-tactical-card border border-tactical-border flex items-center justify-center text-stone-500">
+          ⛰
+        </div>
+        <p class="font-display font-bold text-white text-base">Keranjang gear masih kosong</p>
+        <p class="text-xs text-stone-400 max-w-xs">
+          Pilih gear gunung incaranmu di etalase sebelum diambil pendaki lain!
+        </p>
+      </div>
+
+      <div id="cartItemsContainer" class="space-y-3"></div>
+
+      <!-- Checkout Form -->
+      <div id="buyerFormSection" class="pt-4 border-t border-tactical-border space-y-3 hidden">
+        <p class="text-xs font-mono uppercase tracking-wider text-stone-200 font-bold">Data Pengambilan / Pengiriman</p>
+        
+        <div>
+          <label class="block text-[11px] font-mono text-stone-400 mb-1">Nama Pemesan:</label>
+          <input type="text" id="buyerName" placeholder="Contoh: Bagas Merapi" class="w-full px-3 py-2 rounded bg-tactical-card border border-tactical-border text-xs text-white placeholder-stone-600 focus:outline-none focus:border-tactical-orange" />
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-mono text-stone-400 mb-1">Opsi Pengambilan:</label>
+          <select id="deliveryMethod" class="w-full px-3 py-2 rounded bg-tactical-card border border-tactical-border text-xs text-white focus:outline-none focus:border-tactical-orange">
+            <option value="Ambil Langsung di Basecamp Sleman (Free)">Ambil Langsung di Basecamp Sleman (Free)</option>
+            <option value="Kirim Ekspedisi JNE / J&T / SiCepat">Kirim Ekspedisi JNE / J&T / SiCepat</option>
+            <option value="Instant Gosend / Grab Jogja">Instant Gosend / Grab Jogja</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-mono text-stone-400 mb-1">Alamat / Catatan Fitting:</label>
+          <textarea id="buyerAddress" rows="2" placeholder="Alamat kirim atau jam rencana fitting di toko Sleman..." class="w-full px-3 py-2 rounded bg-tactical-card border border-tactical-border text-xs text-white placeholder-stone-600 focus:outline-none focus:border-tactical-orange"></textarea>
+        </div>
+
+        <!-- Voucher -->
+        <div>
+          <label class="block text-[11px] font-mono text-stone-400 mb-1">Kode Voucher:</label>
+          <div class="flex gap-2">
+            <input type="text" id="voucherInput" placeholder="Ketik: MERAPI10" class="flex-1 px-3 py-2 rounded bg-tactical-card border border-tactical-border text-xs text-white uppercase placeholder-stone-600 font-mono focus:outline-none focus:border-tactical-orange" />
+            <button onclick="applyVoucher()" class="px-3.5 py-2 rounded bg-tactical-surface border border-tactical-border text-tactical-orange text-xs font-mono font-bold hover:border-tactical-orange">
+              Pakai
+            </button>
+          </div>
+          <p id="voucherFeedback" class="text-[11px] font-mono mt-1 hidden"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer -->
+    <div id="cartFooter" class="p-6 border-t border-tactical-border bg-tactical-black space-y-3 hidden">
+      <div class="space-y-1.5 text-xs font-mono">
+        <div class="flex items-center justify-between text-stone-400">
+          <span>Subtotal:</span>
+          <span id="subtotalText" class="text-white font-bold">Rp 0</span>
+        </div>
+        <div id="discountRow" class="flex items-center justify-between text-tactical-moss hidden">
+          <span>Diskon Voucher (10%):</span>
+          <span id="discountText">- Rp 0</span>
+        </div>
+        <div class="flex items-center justify-between text-sm pt-2 border-t border-tactical-border">
+          <span class="font-display font-bold text-white uppercase">Total Gear:</span>
+          <span id="cartTotalText" class="font-display font-black text-xl text-tactical-orange">Rp 0</span>
+        </div>
+      </div>
+
+      <button onclick="checkoutViaWhatsApp()" class="w-full py-3.5 rounded-xl bg-tactical-orange hover:bg-tactical-orangeHover text-white font-display font-black text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg">
+        Bungkus Gear via WhatsApp Sleman
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ================= TOAST ================= -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-200 pointer-events-none">
+    <div class="px-5 py-3 rounded-lg bg-tactical-surface border border-tactical-orange text-white shadow-2xl flex items-center gap-3">
+      <span class="w-2 h-2 rounded-full bg-tactical-orange"></span>
+      <div>
+        <p class="font-display font-bold text-xs uppercase text-tactical-orange">Gear Ditambahkan</p>
+        <p id="toastMessage" class="text-xs text-stone-300">Item masuk ke keranjang</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // 22 Curated Outdoor & Mountain Gear Thrift Items with High-Res Dummy Photos & Website References
+    const PRODUCTS = [
+      {
+        id: 0,
+        name: "Arc'teryx Beta LT Jacket Gore-Tex Pro",
+        category: "Jaket",
+        subCategory: "Hardshell Mountaineering",
+        size: "Size: M (P: 72cm, L: 58cm)",
+        condition: "Condition: 9.6/10",
+        conditionScore: 9.6,
+        price: 375000,
+        specs: "Membrane: 3L Gore-Tex Pro · DWR 100% Water Beading · Seam Tape Full Intact · YKK WaterTight Vislon",
+        notes: "Jaket hardshell kasta tertinggi untuk proteksi badai & hujan lebat gunung. Tidak ada delaminasi, logo bird bordir utuh, drawcord kencang.",
+        badge: "Gore-Tex Pro",
+        image: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Arc'teryx ReGEAR Archive"
+      },
+      {
+        id: 1,
+        name: "The North Face 1996 Nuptse 700 Down",
+        category: "Jaket",
+        subCategory: "Insulated Down Puffer",
+        size: "Size: L (P: 68cm, L: 62cm)",
+        condition: "Condition: 9.3/10",
+        conditionScore: 9.3,
+        price: 285000,
+        specs: "Fill Power: 700 Goose Down · Ripstop Shell DWR · Packable into Hand Pocket · Stowable Hood",
+        notes: "Puff bulu angsa sangat tebal tanpa gembos. Tidak ada kebocoran bulu, kain ripstop mulus, sangat hangat untuk camp suhu minus.",
+        badge: "700 Fill Down",
+        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "The North Face Renewed"
+      },
+      {
+        id: 2,
+        name: "Patagonia Synchilla Snap-T Pullover Fleece",
+        category: "Jaket",
+        subCategory: "Midlayer Polar Fleece",
+        size: "Size: L (P: 71cm, L: 60cm)",
+        condition: "Condition: 9.4/10",
+        conditionScore: 9.4,
+        price: 195000,
+        specs: "Fabric: 100% Recycled Synchilla Fleece · Y-Joint Sleeves · 4-Snap Supplex Nylon Placket",
+        notes: "Fleece tebal lembut bebas matting/brudul. Kancing snap nylon klik mantap, warna oatmeal klasik incaran pegiat gorpcore.",
+        badge: "Warm Fleece",
+        image: "https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Patagonia Worn Wear"
+      },
+      {
+        id: 3,
+        name: "Mountain Hardwear Exposure/2 Gore-Tex Paclite Anorak",
+        category: "Jaket",
+        subCategory: "Ultralight Storm Anorak",
+        size: "Size: M (P: 70cm, L: 56cm)",
+        condition: "Condition: 9.5/10",
+        conditionScore: 9.5,
+        price: 225000,
+        specs: "Membrane: 2.5L Gore-Tex Paclite Plus · Packable Kangaroo Chest Pocket · Helmet Compatible",
+        notes: "Anorak badai ultralight dengan bobot hanya 240g. Warna mustard alpine khas, resleting setengah dada lancar anti-rembes.",
+        badge: "Gore Paclite",
+        image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Mountain Hardwear Archive"
+      },
+      {
+        id: 4,
+        name: "Arc'teryx Gamma MX Softshell Hoody",
+        category: "Jaket",
+        subCategory: "Technical Alpine Softshell",
+        size: "Size: L (P: 73cm, L: 60cm)",
+        condition: "Condition: 9.3/10",
+        conditionScore: 9.3,
+        price: 320000,
+        specs: "Fabric: Fortius 2.0 Breathable Softshell · DWR Finish · Fleece Backer · Cohaesive Hem Adjusters",
+        notes: "Softshell paling serbaguna tahan angin dan gesekan tebing. Breathable tinggi untuk hiking aktif, warna asphalt grey solid.",
+        badge: "Fortius 2.0",
+        image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Arc'teryx System_A Lookbook"
+      },
+      {
+        id: 5,
+        name: "Mammut Ultimate VI SO Gore-Tex Infinium",
+        category: "Jaket",
+        subCategory: "Windstopper Alpine Shell",
+        size: "Size: M (P: 69cm, L: 54cm)",
+        condition: "Condition: 9.2/10",
+        conditionScore: 9.2,
+        price: 245000,
+        specs: "Membrane: 3-Layer Gore-Tex Infinium Windstopper · 4-Way Stretch · Underarm Pit Zips",
+        notes: "Total windproof untuk perlindungan dingin lereng terbuka. Dilengkapi ventilasi ketiak ganda, emblem Mammut bordir presisi.",
+        badge: "GTX Infinium",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Mammut Eiger Extreme Archive"
+      },
+      {
+        id: 6,
+        name: "Gramicci Original G-Pants Climbing",
+        category: "Celana",
+        subCategory: "Trekking & Climbing Trousers",
+        size: "Size: M (Fit W30-33, P: 102cm)",
+        condition: "Condition: 9.2/10",
+        conditionScore: 9.2,
+        price: 145000,
+        specs: "Fabric: Durable Cotton Twill · Diamond Gusseted Crotch · Built-in Nylon Webbing Belt",
+        notes: "Celana outdoor legendaris dengan selangkangan diamond gusset 180° untuk kebebasan bergerak saat scrambling batu. Warna olive wash mulus.",
+        badge: "Ripstop Gusset",
+        image: "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Gramicci Heritage Lookbook"
+      },
+      {
+        id: 7,
+        name: "Fjällräven Keb Trousers G-1000 Reinforced",
+        category: "Celana",
+        subCategory: "Technical Trekking Trousers",
+        size: "Size: EU 48 / W32 (P: 104cm)",
+        condition: "Condition: 9.6/10",
+        conditionScore: 9.6,
+        price: 245000,
+        specs: "Fabric: G-1000 Eco + 4-Way Stretch · Greenland Wax Water Resistant · Knee Pad Pockets · Side Zips",
+        notes: "Celana gunung kasta teratas dari Swedia. Penguatan ganda di lutut & pantat, ventilasi resleting samping paha untuk trekking cuaca terik.",
+        badge: "G-1000 Wax",
+        image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Fjällräven Samlaren Circular"
+      },
+      {
+        id: 8,
+        name: "The North Face Paramount Convertible Zip-Off",
+        category: "Celana",
+        subCategory: "2-in-1 Trekking Pants/Shorts",
+        size: "Size: L (Fit W33-35, P: 103cm)",
+        condition: "Condition: 9.1/10",
+        conditionScore: 9.1,
+        price: 135000,
+        specs: "Tech: FlashDry Fabric · Zip-off Convertible to 10\" Shorts · UPF 50 Sun Protection",
+        notes: "Praktis bisa diubah jadi celana pendek saat menyeberang sungai atau cuaca panas. Resleting lutut lancar tanpa tersendat.",
+        badge: "Zip-Off 2in1",
+        image: "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "The North Face Expedition Archive"
+      },
+      {
+        id: 9,
+        name: "Arc'teryx Gamma Quick-Dry Cargo Pants",
+        category: "Celana",
+        subCategory: "Technical Hiking Trousers",
+        size: "Size: 32 Regular (P: 101cm)",
+        condition: "Condition: 9.4/10",
+        conditionScore: 9.4,
+        price: 215000,
+        specs: "Fabric: TerraTex Nylon Weave · Air Permeable & DWR Treated · Low-Profile Webbing Belt",
+        notes: "Celana trekking super adem dan cepat kering. Memiliki saku paha datar beresleting aman untuk menyimpan kompas dan smartphone.",
+        badge: "TerraTex",
+        image: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Arc'teryx ReGEAR Archive"
+      },
+      {
+        id: 10,
+        name: "Salomon XT-6 Gore-Tex Trail Sneakers",
+        category: "Sepatu",
+        subCategory: "Trail Running & Trekking Kicks",
+        size: "Size: EUR 43 / US 9.5 (Insole 27.5cm)",
+        condition: "Condition: 9.0/10",
+        conditionScore: 9.0,
+        price: 345000,
+        specs: "Membrane: Gore-Tex Waterproof · Outsole: Mud Contagrip (90% Traction) · Quicklace System",
+        notes: "Grip traksi sol sangat tebal anti-licin di lumpur dan bebatuan. Quicklace lancar, upper TPU film utuh tanpa sobek atau retak.",
+        badge: "Contagrip GTX",
+        image: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Salomon Sportstyle Archive"
+      },
+      {
+        id: 11,
+        name: "Hoka One One Kaha 2 Gore-Tex Vibram",
+        category: "Sepatu",
+        subCategory: "High-Cushion Hiking Boots",
+        size: "Size: EUR 42.5 / US 9 (Insole 27.0cm)",
+        condition: "Condition: 9.5/10",
+        conditionScore: 9.5,
+        price: 365000,
+        specs: "Outsole: Vibram Megagrip Traction Lug · Cushion: Dual-Density CMEVA · Gore-Tex Bootie",
+        notes: "Sepatu boot gunung super empuk anti-pegal di turunan curam. Kulit nubuck waterproof premium, sol Vibram tebal 95%.",
+        badge: "Vibram Megagrip",
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Hoka Trail Running Lookbook"
+      },
+      {
+        id: 12,
+        name: "Merrell Moab 3 Tactical Waterproof Vibram",
+        category: "Sepatu",
+        subCategory: "Rugged Tactical Hiking Shoe",
+        size: "Size: EUR 43 / US 9.5 (Insole 27.5cm)",
+        condition: "Condition: 9.2/10",
+        conditionScore: 9.2,
+        price: 235000,
+        specs: "Outsole: Vibram TC5+ · Kinetic Fit Advanced Footbed · Waterproof Membrane · Bellows Tongue",
+        notes: "Sepatu 'Mother of All Boots' tangguh untuk medan berbatu tajam dan semak belukar. Lidah bellows mencegah kerikil masuk.",
+        badge: "Vibram TC5+",
+        image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Merrell 1TRL Archive"
+      },
+      {
+        id: 13,
+        name: "La Sportiva Ultra Raptor II GTX",
+        category: "Sepatu",
+        subCategory: "All-Terrain Mountain Running",
+        size: "Size: EUR 44 / US 10.5 (Insole 28.0cm)",
+        condition: "Condition: 9.3/10",
+        conditionScore: 9.3,
+        price: 295000,
+        specs: "Sole: FriXion White Ultra Grippy · Impact Brake System · Memlex EVA · Gore-Tex Extended Comfort",
+        notes: "Spesialis jalur teknikal berbatu dan pasir lereng gunung. Rem tumit Impact Brake System sangat pakem di turunan curam Merapi.",
+        badge: "FriXion Sole",
+        image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "La Sportiva Mountain Running"
+      },
+      {
+        id: 14,
+        name: "Osprey Talon 22L Technical Daypack",
+        category: "Tas",
+        subCategory: "Technical Summit Daypack",
+        size: "Volume: 22 Liter (Torso S/M Adjustable)",
+        condition: "Condition: 9.5/10",
+        conditionScore: 9.5,
+        price: 235000,
+        specs: "Backpanel: AirScape Breathable Foam · Dual Zippered Hipbelt Pockets · Trekking Pole Attachment",
+        notes: "Tas carrier harian sangat nyaman dengan sirkulasi punggung empuk. Resleting lancar, buckle utuh, include peluit emergency.",
+        badge: "AirScape Back",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Osprey All Mighty Guarantee"
+      },
+      {
+        id: 15,
+        name: "Gregory Baltoro 65L Expedition Carrier",
+        category: "Tas",
+        subCategory: "Heavyweight Expedition Pack",
+        size: "Volume: 65 Liter (Torso M Adjustable)",
+        condition: "Condition: 9.4/10",
+        conditionScore: 9.4,
+        price: 385000,
+        specs: "Suspension: Response A3 Pivot System · FreeFloat Dynamic Hipbelt · Raincover Included · U-Zip Opening",
+        notes: "Raja carrier ekspedisi multi-hari. Sistem suspensi A3 pivot mengikuti gerak pinggul saat melangkah sehingga beban 18kg terasa ringan.",
+        badge: "Response A3",
+        image: "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Gregory Mountain Products"
+      },
+      {
+        id: 16,
+        name: "Patagonia Black Hole Pack 32L Weatherproof",
+        category: "Tas",
+        subCategory: "Durable Commuter & Summit Pack",
+        size: "Volume: 32 Liter",
+        condition: "Condition: 9.3/10",
+        conditionScore: 9.3,
+        price: 210000,
+        specs: "Fabric: 100% Recycled Polyester Ripstop with TPU Film Laminate · DWR Finish · Padded Laptop Sleeve",
+        notes: "Bahan laminasi TPU mengkilap anti-air dan tahan goresan ranting. Cocok untuk daily commute gorpcore maupun daypack trekking.",
+        badge: "TPU Ripstop",
+        image: "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Patagonia Worn Wear Packs"
+      },
+      {
+        id: 17,
+        name: "Arc'teryx Heliad 15L Ultralight Summit Pack",
+        category: "Tas",
+        subCategory: "Ultralight Packable Daypack",
+        size: "Volume: 15 Liter (Weight: 200g)",
+        condition: "Condition: 9.6/10",
+        conditionScore: 9.6,
+        price: 145000,
+        specs: "Fabric: 100D Cordura Mini-Ripstop with Silicone & PU Coatings · Packable into Internal Pocket",
+        notes: "Daypack mini super ringan 200g dari material Cordura mini-ripstop kuat. Bisa dilipat tipis masuk ke carrier utama untuk summit attack.",
+        badge: "Cordura 100D",
+        image: "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Arc'teryx ReGEAR Archive"
+      },
+      {
+        id: 18,
+        name: "Columbia Silver Ridge Omni-Wick Long Sleeve",
+        category: "Baju",
+        subCategory: "Trekking Quick-dry Long Sleeve",
+        size: "Size: L (P: 74cm, L: 58cm)",
+        condition: "Condition: 9.4/10",
+        conditionScore: 9.4,
+        price: 85000,
+        specs: "Tech: Omni-Wick Evaporative · Omni-Shade UPF 40 Sun Protection · Back Mesh Air Vents",
+        notes: "Kemeja trekking super adem cepat kering. Kantong dada ganda dengan velcro, lengan bisa digulung dan dikancing, bebas noda.",
+        badge: "Omni-Wick",
+        image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Columbia Tough Mother Archive"
+      },
+      {
+        id: 19,
+        name: "Montbell W-Knit Trail Baselayer Tee",
+        category: "Baju",
+        subCategory: "Technical Camp & Trail Tee",
+        size: "Size: M (P: 69cm, L: 52cm)",
+        condition: "Condition: 9.5/10",
+        conditionScore: 9.5,
+        price: 75000,
+        specs: "Fabric: Wickron Polyester · Anti-Odor Technology · Flat Seam Construction · Ultra Light 110g",
+        notes: "Kaos lari & pendakian super ringan asal Jepang. Bahan menyerap keringat seketika, jahitan flat-seam tidak membuat kulit lecet.",
+        badge: "Wickron Tech",
+        image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Montbell Japan Outdoor"
+      },
+      {
+        id: 20,
+        name: "Snow Peak Quick Dry Field Utility Shirt",
+        category: "Baju",
+        subCategory: "Campfield Technical Utility Shirt",
+        size: "Size: L (P: 72cm, L: 59cm)",
+        condition: "Condition: 9.5/10",
+        conditionScore: 9.5,
+        price: 125000,
+        specs: "Fabric: Toray DotAir Quick-Dry Breathable Fabric · Dual Flap Cargo Chest Pockets · Camp Collar",
+        notes: "Kemeja campfield aesthetic Jepang dengan bahan berpori mikro mikro Toray DotAir. Sirkulasi udara maksimal untuk camp siang terik.",
+        badge: "Toray DotAir",
+        image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Snow Peak Apparel Archive"
+      },
+      {
+        id: 21,
+        name: "Patagonia Capilene Cool Daily Graphic Sun Hoody",
+        category: "Baju",
+        subCategory: "Lightweight Sun Protection Hoody",
+        size: "Size: M (P: 70cm, L: 53cm)",
+        condition: "Condition: 9.4/10",
+        conditionScore: 9.4,
+        price: 110000,
+        specs: "Tech: HeiQ Mint Odor Control · miDori bioSoft Moisture Wicking · UPF 50+ Sun Hood",
+        notes: "Hoodie baselayer penangkal sengatan sinar matahari saat melintasi jalur punggungan terbuka tanpa pohon. Kain sangat sejuk di kulit.",
+        badge: "UPF 50+ Hood",
+        image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+        detailImages: [
+          "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80"
+        ],
+        refSource: "Patagonia Worn Wear Baselayer"
+      }
+    ];
+
+    let cart = [];
+    let currentCategory = 'All';
+    let currentSearch = '';
+    let currentSort = 'featured';
+    let appliedDiscount = 0;
+
+    function formatIDR(amount) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0
+      }).format(amount);
+    }
+
+    function updateCategoryCounts() {
+      const countAll = PRODUCTS.length;
+      const countJaket = PRODUCTS.filter(p => p.category === 'Jaket').length;
+      const countCelana = PRODUCTS.filter(p => p.category === 'Celana').length;
+      const countSepatu = PRODUCTS.filter(p => p.category === 'Sepatu').length;
+      const countTas = PRODUCTS.filter(p => p.category === 'Tas').length;
+      const countBaju = PRODUCTS.filter(p => p.category === 'Baju').length;
+
+      const elAll = document.getElementById('count-All');
+      const elJaket = document.getElementById('count-Jaket');
+      const elCelana = document.getElementById('count-Celana');
+      const elSepatu = document.getElementById('count-Sepatu');
+      const elTas = document.getElementById('count-Tas');
+      const elBaju = document.getElementById('count-Baju');
+
+      if (elAll) elAll.textContent = countAll;
+      if (elJaket) elJaket.textContent = countJaket;
+      if (elCelana) elCelana.textContent = countCelana;
+      if (elSepatu) elSepatu.textContent = countSepatu;
+      if (elTas) elTas.textContent = countTas;
+      if (elBaju) elBaju.textContent = countBaju;
+    }
+
+    function renderProducts() {
+      updateCategoryCounts();
+
+      const grid = document.getElementById('productGrid');
+      const noResults = document.getElementById('noResultsState');
+
+      let filtered = PRODUCTS.filter(p => {
+        const matchCat = (currentCategory === 'All') || (p.category === currentCategory);
+        const matchSearch = p.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                            p.subCategory.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                            p.specs.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                            p.size.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                            (p.refSource && p.refSource.toLowerCase().includes(currentSearch.toLowerCase()));
+        return matchCat && matchSearch;
+      });
+
+      if (currentSort === 'price-asc') filtered.sort((a, b) => a.price - b.price);
+      else if (currentSort === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+      else if (currentSort === 'condition') filtered.sort((a, b) => b.conditionScore - a.conditionScore);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      grid.innerHTML = filtered.map((item, idx) => `
+        <div class="product-card fade-observe group rounded-xl bg-tactical-card border border-tactical-border hover:border-tactical-orange transition-all duration-200 flex flex-col justify-between overflow-hidden shadow" style="transition-delay: ${(idx % 4) * 75}ms;">
+          
+          <!-- Tactical Outdoor Card Graphic with Real Photo & Resilient Fallback (Rasio 4:5) -->
+          <div class="relative w-full aspect-[4/5] bg-tactical-surface overflow-hidden border-b border-tactical-border flex flex-col justify-between">
+            
+            <!-- Real Outdoor Product Photography -->
+            <img src="${item.image}" alt="${item.name}" loading="lazy" referrerpolicy="no-referrer" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" onerror="if (!this.dataset.retry && '${item.detailImages && item.detailImages[1] ? item.detailImages[1] : ""}') { this.dataset.retry = '1'; this.src = '${item.detailImages && item.detailImages[1] ? item.detailImages[1] : ""}'; } else { this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); }" />
+
+            <!-- Fallback Container if network fails -->
+            <div class="hidden absolute inset-0 bg-tactical-card flex flex-col items-center justify-center p-6 text-center space-y-2">
+              <svg class="w-16 h-16 text-tactical-orange opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 20h18L15 6l-4 7-3-4-5 11z" />
+              </svg>
+              <span class="text-[10px] font-mono text-stone-400 uppercase tracking-widest">${item.badge}</span>
+              <span class="text-xs font-display font-bold text-stone-300">${item.name}</span>
+            </div>
+
+            <!-- Gradient Scrim for readable text over photography -->
+            <div class="absolute inset-0 bg-gradient-to-t from-tactical-black/95 via-tactical-black/30 to-black/40 pointer-events-none"></div>
+
+            <!-- Top badges overlay -->
+            <div class="relative z-10 p-3.5 flex justify-between items-start">
+              <span class="px-2 py-0.5 rounded bg-tactical-black/90 text-tactical-orange text-[11px] font-mono font-bold border border-tactical-border backdrop-blur">
+                ${item.condition}
+              </span>
+              <span class="px-2 py-0.5 rounded bg-tactical-black/90 text-stone-200 text-[10px] font-mono border border-tactical-border backdrop-blur">
+                ${item.badge}
+              </span>
+            </div>
+
+            <!-- Bottom info overlay -->
+            <div class="relative z-10 p-3.5 space-y-1">
+              <span class="text-[9px] font-mono uppercase tracking-widest text-tactical-slate block">Ref: ${item.refSource || "Archive Sleman"}</span>
+              <h3 onclick="openQuickView(${item.id})" class="font-display font-extrabold text-base text-white group-hover:text-tactical-orange transition-colors uppercase leading-snug line-clamp-1 cursor-pointer">
+                ${item.name}
+              </h3>
+              <div class="flex justify-between items-center text-[10px] font-mono text-stone-300 pt-1">
+                <span>${item.size.split('(')[0].trim()}</span>
+                <span class="text-tactical-moss font-bold">● DWR Tested</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Body & Action -->
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <p class="text-xs text-stone-400 leading-relaxed line-clamp-2">${item.notes}</p>
+            
+            <div class="pt-2 border-t border-tactical-border">
+              <div class="flex items-baseline justify-between mb-3">
+                <span class="text-[11px] font-mono text-stone-400">Harga Basecamp</span>
+                <span class="font-display font-black text-lg text-white">${formatIDR(item.price)}</span>
+              </div>
+
+              <div class="grid grid-cols-4 gap-2">
+                <button onclick="openQuickView(${item.id})" class="col-span-1 py-2 rounded bg-tactical-surface border border-tactical-border hover:border-stone-400 text-stone-300 text-xs font-mono font-bold cursor-pointer" title="Cek Detail Spek & Foto">
+                  Spek
+                </button>
+                <button onclick="addToCart(${item.id})" class="col-span-3 py-2 px-3 rounded bg-tactical-orange hover:bg-tactical-orangeHover text-white font-display font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 cursor-pointer">
+                  Ambil Gear
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      `).join('');
+
+      initScrollObserver();
+    }
+
+    function setCategoryFilter(category) {
+      currentCategory = category;
+
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.classList.remove('bg-tactical-orange', 'text-white');
+        btn.classList.add('bg-tactical-surface', 'text-stone-300', 'border', 'border-tactical-border');
+      });
+
+      const activeBtn = document.getElementById(`pill-${category}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-tactical-surface', 'text-stone-300', 'border', 'border-tactical-border');
+        activeBtn.classList.add('bg-tactical-orange', 'text-white');
+      }
+
+      renderProducts();
+    }
+
+    function handleSearch(val) {
+      currentSearch = val;
+      renderProducts();
+    }
+
+    function handleSort(val) {
+      currentSort = val;
+      renderProducts();
+    }
+
+    function resetAllFilters() {
+      currentSearch = '';
+      currentSort = 'featured';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('sortSelect').value = 'featured';
+      setCategoryFilter('All');
+    }
+
+    // Modal Quick View with Interactive Image Angle Switcher
+    function switchModalImage(url, clickedThumb) {
+      const mainImg = document.getElementById('modalMainImg');
+      if (mainImg) {
+        mainImg.src = url;
+      }
+      if (clickedThumb) {
+        document.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('border-tactical-orange', 'scale-105'));
+        clickedThumb.classList.add('border-tactical-orange', 'scale-105');
+      }
+    }
+
+    function openQuickView(id) {
+      const item = PRODUCTS.find(p => p.id === id);
+      if (!item) return;
+
+      const thumbnails = item.detailImages && item.detailImages.length > 0 ? item.detailImages : [item.image];
+
+      const content = document.getElementById('quickViewContent');
+      content.innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+          
+          <!-- Left Photo Preview with Multi-Angle Thumbnails -->
+          <div class="md:col-span-5 space-y-3">
+            <div class="aspect-[4/5] rounded-lg overflow-hidden bg-tactical-card border border-tactical-border relative group">
+              <img id="modalMainImg" src="${item.image}" alt="${item.name}" loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-all duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+              <div class="hidden absolute inset-0 flex items-center justify-center bg-tactical-surface p-6">
+                <svg class="w-20 h-20 text-tactical-orange opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 20h18L15 6l-4 7-3-4-5 11z" />
+                </svg>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-tactical-black/80 via-transparent to-black/20 pointer-events-none"></div>
+              
+              <div class="absolute top-3 left-3">
+                <span class="px-2 py-0.5 rounded bg-tactical-black/90 text-tactical-orange font-mono font-bold text-[11px] border border-tactical-border">
+                  ${item.condition}
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 text-[10px] font-mono text-stone-300 bg-tactical-black/80 px-2.5 py-1 rounded border border-tactical-border flex justify-between">
+                <span>${item.badge}</span>
+                <span class="text-tactical-moss font-bold">Lolos Uji DWR</span>
+              </div>
+            </div>
+
+            <!-- Alternative Photo Angle Thumbnails -->
+            <div class="space-y-1.5">
+              <span class="text-[10px] font-mono text-stone-400 uppercase tracking-wider block">Foto Sudut Lain & Referensi:</span>
+              <div class="flex items-center gap-2 overflow-x-auto pb-1">
+                ${thumbnails.map((imgUrl, i) => `
+                  <button onclick="switchModalImage('${imgUrl}', this)" class="modal-thumb w-14 h-14 rounded-lg overflow-hidden border ${i === 0 ? 'border-tactical-orange' : 'border-tactical-border'} hover:border-tactical-orange transition-all flex-shrink-0 cursor-pointer">
+                    <img src="${imgUrl}" alt="Sudut ${i+1}" class="w-full h-full object-cover" />
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Details -->
+          <div class="md:col-span-7 space-y-4">
+            <div class="border-b border-tactical-border pb-3">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-xs font-mono text-tactical-orange uppercase tracking-wider">${item.category} · ${item.subCategory}</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-tactical-card border border-tactical-border text-stone-300">
+                  Ref: ${item.refSource || "Archive Sleman"}
+                </span>
+              </div>
+              <h3 class="font-display font-black text-2xl text-white uppercase mt-1 leading-snug">${item.name}</h3>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-tactical-black border border-tactical-border space-y-2 text-xs font-mono">
+              <div class="flex justify-between">
+                <span class="text-stone-400">Ukuran / Fit:</span>
+                <span class="text-white font-bold">${item.size}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-stone-400">Teknikal & Material:</span>
+                <span class="text-tactical-moss font-bold">${item.specs}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-stone-400">Ketersediaan Stok:</span>
+                <span class="text-tactical-orange font-bold">1 Pcs di Basecamp Sleman</span>
+              </div>
+            </div>
+
+            <!-- Inspection Checkpoints -->
+            <div class="grid grid-cols-2 gap-2 text-[11px] font-mono">
+              <div class="p-2 rounded bg-tactical-surface border border-tactical-border text-stone-300 flex items-center gap-1.5">
+                <span class="text-tactical-moss font-bold">✓</span>
+                <span>DWR Water Beading OK</span>
+              </div>
+              <div class="p-2 rounded bg-tactical-surface border border-tactical-border text-stone-300 flex items-center gap-1.5">
+                <span class="text-tactical-moss font-bold">✓</span>
+                <span>Seam Sealing Utuh</span>
+              </div>
+              <div class="p-2 rounded bg-tactical-surface border border-tactical-border text-stone-300 flex items-center gap-1.5">
+                <span class="text-tactical-moss font-bold">✓</span>
+                <span>Resleting YKK Normal</span>
+              </div>
+              <div class="p-2 rounded bg-tactical-surface border border-tactical-border text-stone-300 flex items-center gap-1.5">
+                <span class="text-tactical-moss font-bold">✓</span>
+                <span>Tech Wash Higienis</span>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-mono uppercase text-stone-300 font-bold mb-1">Catatan Kurasi Fisik:</h4>
+              <p class="text-xs text-stone-400 leading-relaxed">${item.notes}</p>
+            </div>
+
+            <div class="pt-3 border-t border-tactical-border flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div>
+                <span class="text-[11px] font-mono text-stone-400 block">Harga Thrift Outdoor:</span>
+                <span class="font-display font-black text-2xl text-white">${formatIDR(item.price)}</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <a href="https://wa.me/6281234567890?text=${encodeURIComponent('Halo Admin Basecamp Sleman, saya mau tanya/order gear: ' + item.name + ' (' + item.size + ') harga ' + formatIDR(item.price) + '. Apakah masih ready di ruko Jakal?')}" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-tactical-surface border border-tactical-orange text-tactical-orange hover:bg-tactical-orange hover:text-white font-mono font-bold text-xs uppercase transition-colors flex items-center justify-center gap-1">
+                  Chat WA Gear
+                </a>
+                <button onclick="addToCart(${item.id}); closeQuickView();" class="px-5 py-3 rounded-xl bg-tactical-orange hover:bg-tactical-orangeHover text-white font-display font-bold text-xs uppercase cursor-pointer flex-1 sm:flex-initial">
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      `;
+
+      const modalBackdrop = document.getElementById('quickViewBackdrop');
+      modalBackdrop.classList.remove('hidden');
+      setTimeout(() => {
+        modalBackdrop.classList.remove('opacity-0');
+        document.getElementById('quickViewModal').classList.remove('scale-95');
+      }, 10);
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeQuickView() {
+      const modalBackdrop = document.getElementById('quickViewBackdrop');
+      modalBackdrop.classList.add('opacity-0');
+      document.getElementById('quickViewModal').classList.add('scale-95');
+      document.body.classList.remove('overflow-hidden');
+      setTimeout(() => modalBackdrop.classList.add('hidden'), 200);
+    }
+
+    // Cart System
+    function addToCart(id) {
+      const item = PRODUCTS.find(p => p.id === id);
+      if (!item) return;
+
+      const existing = cart.find(i => i.id === id);
+      if (existing) {
+        showToast(`Stok ${item.name} hanya 1 pcs!`);
+      } else {
+        cart.push({ ...item, quantity: 1 });
+        updateCartUI();
+        showToast(`${item.name} ditambahkan ke keranjang!`);
+      }
+      openCart();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(i => i.id !== id);
+      updateCartUI();
+    }
+
+    function applyVoucher() {
+      const val = document.getElementById('voucherInput').value.trim().toUpperCase();
+      const fb = document.getElementById('voucherFeedback');
+      if (val === 'MERAPI10' || val === 'JOGJASTREET') {
+        appliedDiscount = 0.10;
+        fb.textContent = '✓ Voucher 10% Berhasil Digunakan!';
+        fb.className = 'text-[11px] font-mono mt-1 text-tactical-moss';
+        fb.classList.remove('hidden');
+        showToast('Diskon 10% berhasil dipasang!');
+      } else if (val === '') {
+        appliedDiscount = 0;
+        fb.classList.add('hidden');
+      } else {
+        appliedDiscount = 0;
+        fb.textContent = '✕ Kode voucher tidak valid.';
+        fb.className = 'text-[11px] font-mono mt-1 text-red-400';
+        fb.classList.remove('hidden');
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.length;
+      const subtotal = cart.reduce((sum, i) => sum + i.price, 0);
+      const discount = subtotal * appliedDiscount;
+      const total = subtotal - discount;
+
+      document.getElementById('cartCountBadge').textContent = totalCount;
+      document.getElementById('drawerCountBadge').textContent = totalCount;
+
+      const emptyState = document.getElementById('emptyCartState');
+      const container = document.getElementById('cartItemsContainer');
+      const formSection = document.getElementById('buyerFormSection');
+      const footer = document.getElementById('cartFooter');
+
+      if (cart.length === 0) {
+        emptyState.classList.remove('hidden');
+        container.innerHTML = '';
+        formSection.classList.add('hidden');
+        footer.classList.add('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+        formSection.classList.remove('hidden');
+        footer.classList.remove('hidden');
+
+        document.getElementById('subtotalText').textContent = formatIDR(subtotal);
+        if (appliedDiscount > 0) {
+          document.getElementById('discountRow').classList.remove('hidden');
+          document.getElementById('discountText').textContent = `- ${formatIDR(discount)}`;
+        } else {
+          document.getElementById('discountRow').classList.add('hidden');
+        }
+        document.getElementById('cartTotalText').textContent = formatIDR(total);
+
+        container.innerHTML = cart.map(item => `
+          <div class="p-3.5 rounded-lg bg-tactical-card border border-tactical-border flex items-center justify-between gap-3">
+            <div class="flex-1">
+              <p class="font-display font-bold text-xs text-white line-clamp-1">${item.name}</p>
+              <div class="flex items-center gap-2 mt-0.5 text-[11px] font-mono text-stone-400">
+                <span>${item.size.split('(')[0].trim()}</span>
+                <span>•</span>
+                <span class="text-tactical-orange font-bold">${formatIDR(item.price)}</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-mono bg-tactical-black px-1.5 py-0.5 rounded text-stone-400 border border-tactical-border">1 Pcs</span>
+              <button onclick="removeFromCart(${item.id})" class="text-stone-500 hover:text-red-400 p-1" title="Hapus">✕</button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) return;
+      const name = document.getElementById('buyerName').value.trim() || 'Pendaki ThriftHaven';
+      const method = document.getElementById('deliveryMethod').value;
+      const notes = document.getElementById('buyerAddress').value.trim() || '-';
+      const voucher = document.getElementById('voucherInput').value.trim().toUpperCase();
+
+      const subtotal = cart.reduce((sum, i) => sum + i.price, 0);
+      const discount = subtotal * appliedDiscount;
+      const grandTotal = subtotal - discount;
+
+      let msg = `*ORDER OUTDOOR GEAR THRIFTHAVEN SLEMAN*%0A`;
+      msg += `----------------------------------------%0A`;
+      msg += `*Nama:* ${name}%0A`;
+      msg += `*Metode:* ${method}%0A`;
+      msg += `*Alamat/Catatan:* ${notes}%0A`;
+      msg += `----------------------------------------%0A`;
+      msg += `*ITEM GEAR (1-OF-1 ARCHIVE):*%0A`;
+
+      cart.forEach((item, idx) => {
+        msg += `${idx + 1}. *${item.name}*%0A   ${item.size.split('(')[0].trim()} | ${formatIDR(item.price)}%0A`;
+      });
+
+      msg += `----------------------------------------%0A`;
+      msg += `*Subtotal:* ${formatIDR(subtotal)}%0A`;
+      if (appliedDiscount > 0) {
+        msg += `*Diskon (${voucher}):* -${formatIDR(discount)}%0A`;
+      }
+      msg += `*TOTAL:* ${formatIDR(grandTotal)}%0A`;
+      msg += `----------------------------------------%0A`;
+      msg += `Halo Admin Basecamp Sleman, tolong tahan gear di atas dan konfirmasi rekening / jadwal mampir fitting ya! Terima kasih ⛰`;
+
+      window.open(`https://wa.me/6281234567890?text=${msg}`, '_blank');
+    }
+
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartBackdrop = document.getElementById('cartBackdrop');
+    const cartBtn = document.getElementById('cartBtn');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+
+    function openCart() {
+      cartBackdrop.classList.remove('hidden');
+      setTimeout(() => cartBackdrop.classList.remove('opacity-0'), 10);
+      cartDrawer.classList.remove('translate-x-full');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeCart() {
+      cartBackdrop.classList.add('opacity-0');
+      cartDrawer.classList.add('translate-x-full');
+      document.body.classList.remove('overflow-hidden');
+      setTimeout(() => cartBackdrop.classList.add('hidden'), 200);
+    }
+
+    cartBtn.addEventListener('click', openCart);
+    closeCartBtn.addEventListener('click', closeCart);
+    cartBackdrop.addEventListener('click', closeCart);
+
+    let toastTimer;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMessage').textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2500);
+    }
+
+    // Mobile nav
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function toggleMobileMenu(force) {
+      const shouldOpen = typeof force === 'boolean' ? force : mobileMenu.classList.contains('hidden');
+      if (shouldOpen) {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', () => toggleMobileMenu());
+
+    // Palette & Theme Switcher System
+    function getThemeDisplayName(name) {
+      switch(name) {
+        case 'volcano': return 'Merapi Volcanic Magma';
+        case 'forest': return 'Pine Ridge Forest';
+        case 'glacial': return 'Arctic Glacial Summit';
+        default: return 'Obsidian Gorpcore';
+      }
+    }
+
+    function selectTheme(themeName) {
+      if (themeName === 'obsidian') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', themeName);
+      }
+      try {
+        localStorage.setItem('thrifthaven_theme', themeName);
+      } catch (e) {}
+      updateThemeModalUI(themeName);
+      showToast(`Palet warna diubah ke: ${getThemeDisplayName(themeName)}`);
+    }
+
+    function updateThemeModalUI(activeTheme) {
+      const effectiveTheme = activeTheme || 'obsidian';
+      document.querySelectorAll('.theme-card').forEach(card => {
+        const tName = card.getAttribute('data-theme-name');
+        const check = card.querySelector('.theme-check');
+        if (tName === effectiveTheme) {
+          card.classList.add('ring-2', 'ring-tactical-orange', 'border-transparent');
+          if (check) check.classList.remove('hidden');
+        } else {
+          card.classList.remove('ring-2', 'ring-tactical-orange', 'border-transparent');
+          if (check) check.classList.add('hidden');
+        }
+      });
+      const mobileLabel = document.getElementById('currentPaletteLabelMobile');
+      if (mobileLabel) {
+        mobileLabel.textContent = `${getThemeDisplayName(effectiveTheme)} →`;
+      }
+    }
+
+    function openPaletteModal() {
+      const current = localStorage.getItem('thrifthaven_theme') || 'obsidian';
+      updateThemeModalUI(current);
+      const backdrop = document.getElementById('paletteModalBackdrop');
+      backdrop.classList.remove('hidden');
+      setTimeout(() => {
+        backdrop.classList.remove('opacity-0');
+        document.getElementById('paletteModal').classList.remove('scale-95');
+      }, 10);
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closePaletteModal() {
+      const backdrop = document.getElementById('paletteModalBackdrop');
+      backdrop.classList.add('opacity-0');
+      document.getElementById('paletteModal').classList.add('scale-95');
+      document.body.classList.remove('overflow-hidden');
+      setTimeout(() => backdrop.classList.add('hidden'), 200);
+    }
+
+    document.getElementById('paletteModalBackdrop')?.addEventListener('click', (e) => {
+      if (e.target === document.getElementById('paletteModalBackdrop')) {
+        closePaletteModal();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePaletteModal();
+        closeQuickView();
+        closeCart();
+      }
+    });
+
+    // Timer
+    function initTimer() {
+      let sec = 7 * 3600 + 38 * 60 + 45;
+      const hEl = document.getElementById('countdownHours');
+      const mEl = document.getElementById('countdownMinutes');
+      const sEl = document.getElementById('countdownSeconds');
+
+      setInterval(() => {
+        if (sec > 0) {
+          sec--;
+          hEl.textContent = String(Math.floor(sec / 3600)).padStart(2, '0');
+          mEl.textContent = String(Math.floor((sec % 3600) / 60)).padStart(2, '0');
+          sEl.textContent = String(sec % 60).padStart(2, '0');
+        }
+      }, 1000);
+    }
+
+    // Intersection Observer for Scroll Fade-In on Product Cards, Categories, and Sections
+    let scrollObserver = null;
+
+    function initScrollObserver() {
+      // Disconnect previous observer when cards re-render
+      if (scrollObserver) {
+        scrollObserver.disconnect();
+      }
+
+      // Fallback for browsers without IntersectionObserver support
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.fade-observe').forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+
+      scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '0px 0px -30px 0px',
+        threshold: 0.08
+      });
+
+      // Observe all un-triggered elements with .fade-observe
+      document.querySelectorAll('.fade-observe:not(.is-visible)').forEach(el => {
+        scrollObserver.observe(el);
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      initScrollObserver();
+      initTimer();
+      const currentTheme = localStorage.getItem('thrifthaven_theme') || 'obsidian';
+      updateThemeModalUI(currentTheme);
+    });
+  </script>
+</body>
+</html>

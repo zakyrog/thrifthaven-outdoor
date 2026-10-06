@@ -1,0 +1,6 @@
+{
+  "name": "ThriftHaven Outdoor Sleman - Curated Gorpcore & Mountain Gear Thrift",
+  "description": "Toko thrift outdoor terpercaya di Sleman Yogyakarta. Jaket gunung, sneakers trail, celana trekking, tas carrier, dan pakaian outdoor curated grade A.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
